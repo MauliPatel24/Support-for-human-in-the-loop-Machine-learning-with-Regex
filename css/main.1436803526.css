@@ -5561,3 +5561,11 @@ textarea {
 .overflow_handler {
 	overflow: auto
 }
+
+/* new changes*/
+/* run on file*/
+#run_on_file #main_editor {
+    width: 60%;
+    float: left;
+    padding: 10px;
+}
