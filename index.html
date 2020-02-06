@@ -1,15 +1,13 @@
-<!--<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%> -->
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>Regex on ML</title>
+	<title>Online regex tester and debugger: JavaScript, Python, PHP, and PCRE</title>
 	<link href="css/font-open-sans/open-sans.css" rel="stylesheet" type="text/css">
 	<link href="css/main.1436803526.css" rel="stylesheet" type="text/css">
 	<link type="text/plain" rel="author" href="//regex101.com/humans.txt">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<meta charset="ISO-8859-1">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="keywords" content="javascript,regex,regular expression,debugger,explainer,helper,tester,match,pcre,python,editor">
 	<meta name="description" content="Online regex tester, debugger with highlighting for PHP, PCRE, Python and JavaScript.">
@@ -51,7 +49,10 @@
 				</h1>
 				<ul id="header_nav">
 					<li class="fullscreen header_nav active main_menu main" data-id="40">
-						<i class="fa fa-terminal"></i><span class="large_menu">Regex Tester</span>
+						<a  href="#regex_editor"><i class="fa fa-terminal"></i><span class="large_menu">Regex Tester</span></a>
+					</li>
+					<li class="fullscreen header_nav  main_menu main" >
+						<a  href="#run_on_file"><i class="fa fa-file-text"></i><span class="large_menu">test</span></a>
 					</li>
 					<li class="fullscreen header_nav main_menu community" data-id="43" >
 						<i class="fa fa-cloud"></i><span class="large_menu">Regex Library</span>
@@ -171,18 +172,18 @@
 		<li class="regex_menu extension_menu no_top_space">
 			<ul>
 				<li class="menu_notice">Flavor</li>
-				<li class="flavor_pcre menu_item active" data-id="20">
+				<!--<li class="flavor_pcre menu_item active" data-id="20">
 					<span class="mini_menu">PCRE</span>
 					<span class="large_menu"><i class="fa fa-file"></i>PCRE (PHP)</span>
-				</li>
+				</li>-->
 				<li class="flavor_js menu_item " data-id="21">
 					<span class="mini_menu">JS</span>
 					<span class="large_menu"><i class="fa fa-file"></i>JavaScript</span>
 				</li>
-				<li class="flavor_python menu_item " data-id="22">
+				<!--<li class="flavor_python menu_item " data-id="22">
 					<span class="mini_menu">PY</span>
 					<span class="large_menu"><i class="fa fa-file"></i>Python</span>
-				</li>
+				</li>-->
 			</ul>
 		</li>
 		<li class="regex_menu extension_menu" id="tools_menu">
@@ -234,8 +235,52 @@
 	</ul>
 </div>
 <div id="content">
-	<div id="community" class="box_overflow_fix extension_window"></div>
-	<div id="account" class="box_overflow_fix extension_window"></div>
+	<!-- <div id="community" class="box_overflow_fix extension_window"><p>in community </p></div> -->
+	<div id="run_on_file" class="box_overflow_fix extension_window">
+		<div id="main_editor" class="flex-container box_overflow_fix"><!--<p>run on file </p>-->
+			<div id="regex_container" class="flex-regex box_overflow_fix">
+				<label for="regex">
+					Regular Expression
+					<span id="result_indicator" class="no_match">no match</span>
+				</label>
+
+				<div id="regex_input" class="box_overflow_fix richtext_parent">
+					<div id="delimiter_selector" class="richtext_left slash_menu slash box_overflow_fix" data-dropdown=".delimiter-dropdown">/</div>
+					<div class="richtext_right">
+						<div class="slash slash_menu" data-dropdown=".delimiter-dropdown">/</div>
+						<div id="options_container">
+							<input data-focus="#options_container" value="" id="options" name="options" size="20" tabindex="2" type="text" placeholder="gmixXsuUAJ"/>
+							<i id="options_helper" class="fa fa-question-circle"></i>
+						</div>
+						<div id="options_helper_contents"></div>
+					</div>
+					<div class="richtext_padding">
+						<div class="richtext_container" id="richtext_regex_container">
+							<div class="richtext" id="richtext_regex">
+								<pre><span class="colorizer_height"></span><br/></pre>
+								<pre id="regex_colors"><span></span><br/></pre>
+								<textarea data-focus="#richtext_regex_container" spellcheck="false" id="regex" name="regex" tabindex="1" rows="1" cols="50" placeholder="insert your regular expression here" autofocus="autofocus"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="test_result_container" class="box_overflow_fix flex-text ">
+				<label for="regex_string">Test string</label>
+				<div class="overflow_handler flex-grow">
+					<!--<div class="richtext" id="richtext_test">
+						<pre><span id="richtext_test_size"></span><br>&nbsp;</pre>
+						<pre id="richtext_test_colors"><span id="test_color_element"></span><br></pre>
+						<textarea wrap="off" data-focus="#test_result_container .overflow_handler" spellcheck="false" id="regex_string" class="box_overflow_fix" name="test" rows="10" tabindex="3" placeholder="insert your test string here"></textarea>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<div id="regex_treeview" class="box_overflow_fix">
+		
+		</div> 
+	</div>
+	<div id="account" class="box_overflow_fix extension_window"><p>in account </p></div>
 
 	<div id="regex_editor" class="box_overflow_fix">
 		<div id="code_samples" class="extension_window box_overflow_fix overflow_handler"></div>
@@ -450,6 +495,15 @@
 <script src="js/explainer.regex101.1436803512.js" type="text/javascript"></script>
 <script src="js/common.regex101.1436803517.js" type="text/javascript"></script>
 <script src="js/matcher.regex101.1436803513.js" type="text/javascript"></script>
-</body>
+<script>$("#header_nav a").click(function(e) { 
 
+			console.log("testing"); 
+			$("div [id='regex_editor']").hide(); 
+			$("div [id='run_on_file']").hide(); 
+			
+			$("div [id='" + $(this).attr("href").replace("#","") + "']").show();
+			$("#header_nav li").removeClass("active");
+			$(this).parent().addClass("active")
+		});</script>
+</body>
 </html>
