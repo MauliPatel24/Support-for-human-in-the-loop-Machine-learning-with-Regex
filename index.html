@@ -276,8 +276,33 @@
 				</div>
 			</div>
 		</div>
-		<div id="regex_treeview" class="box_overflow_fix" style="width:60%">
-			<p> here</p>
+		<div id="regex_treeview" class="box_overflow_fix" >
+			<div id="treeview_resizer" title="Keep dragging"><div></div></div>
+			<div id="treeview_content" class="box_overflow_fix flex-container">
+				<div id="scroll_treeview" class="box_overflow_fix flex-elem">
+
+					<div id="explainer_label" class="label expander">
+						<span class="fa"></span>Explanation
+					</div>
+					<div class="overflow_handler box_overflow_fix flex-grow">
+						<div id="treeview" style="height: 100%">
+							An explanation of your regex will be automatically generated as you type.
+						</div>
+					</div>
+				</div>
+				<div id="scroll_match" class="box_overflow_fix flex-elem">
+
+					<div id="match_label" class="label expander">
+						<span class="fa"></span>Match information
+					</div>
+					<div class="overflow_handler box_overflow_fix flex-grow">
+						<div id="match_info">
+							Detailed match information will be displayed here automatically.
+						</div>
+					</div>
+
+				</div>
+			</div>
 		</div> 
 	</div>
 	<div id="account" class="box_overflow_fix extension_window"><p>in account </p></div>
