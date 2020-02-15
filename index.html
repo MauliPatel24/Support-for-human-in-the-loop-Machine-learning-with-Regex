@@ -51,6 +51,9 @@
 					<li class="fullscreen header_nav active main_menu main" data-id="40">
 						<i class="fa fa-terminal"></i><span class="large_menu">Regex Tester</span>
 					</li>
+					<li class="fullscreen header_nav  main_menu main"><a
+						href="#run_on_file"><i class="fa fa-file-text"></i><span
+							class="large_menu">test</span></a></li>
 					<li class="fullscreen header_nav main_menu community" data-id="43" style="display: none">
 						<i class="fa fa-cloud"></i><span class="large_menu">Regex Library</span>
 					</li>
@@ -235,6 +238,9 @@
 	<div id="community" class="box_overflow_fix extension_window"></div>
 	<div id="account" class="box_overflow_fix extension_window"></div>
 
+	<div id="run_on_file" class="box_overflow_fix">
+		<p> hello in run on file </p>
+	</div>
 	<div id="regex_editor" class="box_overflow_fix">
 		<div id="code_samples" class="extension_window box_overflow_fix overflow_handler"></div>
 
@@ -448,5 +454,18 @@
 <script src="js/explainer.regex101.1436803512.js" type="text/javascript"></script>
 <script src="js/common.regex101.1436803517.js" type="text/javascript"></script>
 <script src="js/matcher.regex101.1436803513.js" type="text/javascript"></script>
+<script>
+	$("#header_nav a").click(
+		function(e) {
+
+			console.log("testing");
+			$("div [id='regex_editor']").hide();
+			$("div [id='run_on_file']").hide();
+
+			$("div [id='" + $(this).attr("href").replace("#", "")+ "']").show();
+			$("#header_nav li").removeClass("active");
+			$(this).parent().addClass("active")
+		});
+</script>
 </body>
 </html>
