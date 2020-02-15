@@ -5566,7 +5566,8 @@ textarea {
 /* run on file*/
 #run_on_file {
 	height: 100%;
-	width: 100%
+	width: 100%;
+	position: fixed
 }
 #run_on_file #main_editor_2 {
     width: 60%;
