@@ -5564,8 +5564,16 @@ textarea {
 
 /* new changes*/
 /* run on file*/
-#run_on_file #main_editor {
+#run_on_file {
+	height: 100%;
+	width: 100%
+}
+#run_on_file #main_editor_2 {
     width: 60%;
     float: left;
     padding: 10px;
+}
+
+#main_editor_2.treeview_hidden {
+	width: calc(100% - 11px)!important
 }
