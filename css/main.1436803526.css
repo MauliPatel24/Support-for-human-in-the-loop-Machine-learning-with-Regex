@@ -5563,6 +5563,175 @@ textarea {
 }
 
 /* new changes*/
+/* for light / dark theme*/
+
+body.light #version_container_2 span {
+	color: #aa0707
+}
+body.dark #version_container_2 span {
+	color: #ec7b7b
+}
+
+body.light #result_indicator_2 {
+	background: rgba(0, 0, 0, .2);
+	color: #fff
+}
+
+body.light #result_indicator_2.found_match {
+	background: #47a577;
+	color: #fff
+}
+
+body.light #result_indicator_2.error {
+	color: #fff;
+	background: #f00000
+}
+
+body.dark #result_indicator_2 {
+	background: rgba(255, 255, 255, .2);
+	color: #999
+}
+
+body.dark #result_indicator_2.found_match {
+	background: #47a577;
+	color: #fff
+}
+
+body.dark #result_indicator_2.error {
+	color: #fff;
+	background: #AC1A1A
+}
+
+body.light #options_container_2,
+body.light #richtext_regex_container_2,
+body.light #test_result_container_2 .overflow_handler {
+	background: #fff;
+	color: #282828;
+	border: 1px solid #afafaf
+}
+
+body.light #options_container_2,
+body.light #richtext_regex_container_2,
+body.light #test_result_container_2 .overflow_handler,
+body.light .account_regex,
+body.light .basic_richtext,
+body.light .filter_input,
+body.light input:not([data-focus]),
+body.light textarea:not([data-focus]) {
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1)
+}
+
+body.dark #options_container_2,
+body.dark #richtext_regex_container_2,
+body.dark #test_result_container_2 .overflow_handler,
+body.dark .basic_richtext {
+	background: #141517;
+	color: #B0B1B6;
+	border: 1px solid #212121
+}
+
+body.light #options_helper_2 {
+	color: rgba(0, 0, 0, .4)
+}
+
+body.light #options_helper_2:hover {
+	color: #457abb
+}
+
+body.dark #options_helper_2 {
+	color: rgba(255, 255, 255, .4)
+}
+
+body.dark #options_helper_2:hover {
+	color: #B0B1B6
+}
+
+body.light #options_helper_contents_2,
+body.light #settings_popup_contents_2 {
+	border-color: #fff;
+	-webkit-box-shadow: 0 0 32px rgba(0, 0, 0, .45);
+	-moz-box-shadow: 0 0 32px rgba(0, 0, 0, .45);
+	box-shadow: 0 0 32px rgba(0, 0, 0, .45);
+	background: #f7f7f7
+}
+
+body.light #options_helper_contents_2:after {
+	border-bottom-color: #f7f7f7!important
+}
+
+body.light #options_helper_contents_2:before {
+	border-bottom-color: #fff!important
+}
+
+body.light #options_helper_contents_2 .modifier,
+body.light .treeview .modifier {
+	background: #e3d9ee;
+	color: #54256f
+}
+
+body.dark #options_helper_contents_2 .modifier,
+body.dark .treeview .modifier {
+	background: #4E257A;
+	color: #E5B8FF
+}
+
+body.dark #options_helper_contents_2,
+body.dark #settings_popup_contents_2 {
+	border-color: #555!important;
+	-webkit-box-shadow: 0 0 48px #000;
+	-moz-box-shadow: 0 0 48px #000;
+	box-shadow: 0 0 48px #000;
+	background: #1c1c1f
+}
+
+body.dark #options_helper_contents_2:after {
+	border-bottom-color: #1c1c1f!important
+}
+
+body.dark #options_helper_contents_2:before {
+	border-bottom-color: #555!important
+}
+
+body.light.default #regex_colors_2 .caret {
+	border-color: #282828
+}
+
+body.light.default_light #regex_colors_2 .caret {
+	border-color: #282828
+}
+
+body.dark.default #regex_colors_2 .caret {
+	border-color: #B0B1B6
+}
+
+body.dark.default #regex_colors_2 b .caret {
+	border-color: #F69431
+}
+
+body.dark.default #regex_colors_2 i b .caret,
+body.dark.default #regex_colors_2 i u .caret {
+	border-color: #B0B1B6
+}
+
+body.dark.default #regex_colors_2 u .caret {
+	border-color: #A2F342
+}
+
+body.dark.default #regex_colors_2 b.et .caret {
+	border-color: #B0B1B6
+}
+
+body.dark.default #regex_colors_2 .selected_paren .caret {
+	border-color: red!important
+}
+
+body.dark.default #regex_colors_2 b.err .caret {
+	border-color: #fff
+}
+
+
 /* run on file*/
 #run_on_file {
 	height: 100%;
@@ -5578,3 +5747,238 @@ textarea {
 #main_editor_2.treeview_hidden {
 	width: calc(100% - 11px)!important
 }
+
+#regex_container_2 #version_container_2 {
+	display: inline-block
+}
+
+#regex_container_2 #version_container_2 span {
+	font-size: 10px;
+	margin-left: 1px
+}
+
+#regex_container_2 #version_selector_2 {
+	vertical-align: text-bottom;
+	width: 110px
+}
+
+#regex_container_2 #result_indicator_2 {
+	float: right;
+	padding: 0 10px;
+	font-weight: 400;
+	text-transform: none;
+	font-size: 12px;
+	font-variant: small-caps;
+	height: 24px;
+	line-height: 24px;
+	margin: 3px 1px 0 0
+}
+
+#regex_container_2 #regex_input_2 {
+	margin-bottom: 10px
+}
+
+#regex_container_2 #regex_input_2 .richtext_padding {
+	padding: 0 120px 0 20px
+}
+
+#regex_container_2 #regex_input_2 .richtext_left {
+	float: left
+}
+
+#regex_container_2 #regex_input_2 .richtext_right {
+	float: right;
+	width: 150px
+}
+
+#regex_container_2 #regex_input_2 #richtext_regex_container_2 {
+	overflow-y: auto;
+	max-height: 170px
+}
+
+@media only screen and (min-height:700px) {
+	#regex_container_2 #regex_input_2 #richtext_regex_container_2 {
+		max-height: 250px
+	}
+}
+
+@media only screen and (min-height:850px) {
+	#regex_container_2 #regex_input_2 #richtext_regex_container_2 {
+		max-height: 350px
+	}
+}
+
+@media only screen and (min-height:1000px) {
+	#regex_container_2 #regex_input_2 #richtext_regex_container_2 {
+		max-height: 450px
+	}
+}
+
+#regex_container_2 #regex_input_2 .slash {
+	float: left;
+	width: 20px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 20px
+}
+
+#regex_container_2 #regex_input_2 .slash_menu:hover {
+	color: #3385C2;
+	cursor: pointer
+}
+
+#regex_container_2 #regex_input_2 #options_container_2 {
+	float: left;
+	width: 130px;
+	overflow: hidden;
+	position: relative;
+	z-index: 5000
+}
+
+#regex_container_2 #regex_input_2 #options_container_2 #options_2 {
+	float: left;
+	width: 105px;
+	display: block;
+	border: 0;
+	padding: 5px;
+	background: 0 0
+}
+
+#regex_container_2 #regex_input_2 #options_container_2 #options_helper_2 {
+	width: 15px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: help;
+	height: 29px;
+	line-height: 29px
+}
+
+#regex_container_2 #regex_input_2 #options_helper_contents_2 {
+	display: none;
+	position: absolute;
+	z-index: 5000;
+	font-size: 13px;
+	border: 2px solid transparent;
+	padding: 10px
+}
+
+#regex_container_2 #regex_input_2 #options_helper_contents_2 span {
+	padding: 0 3px
+}
+
+#regex_container_2 #regex_input_2 #options_helper_contents_2 ul {
+	padding: 0;
+	margin: 0;
+	list-style: none
+}
+
+#regex_container_2 #regex_input_2 #options_helper_contents_2 ul li:not(:last-child) {
+	margin-bottom: 2px
+}
+
+#regex_container_2 #regex_input_2 #options_helper_contents_2:after,
+#regex_container_2 #regex_input_2 #options_helper_contents_2:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none
+}
+
+#regex_container_2 #regex_input_2 #options_helper_contents_2:after {
+	border-color: transparent;
+	border-width: 5px;
+	right: 9px
+}
+
+#regex_container_2 #regex_input_2 #options_helper_contents_2:before {
+	border-color: transparent;
+	border-width: 7px;
+	right: 7px
+}
+
+#account .account_regex,
+#code_samples_2 pre,
+#match_captures_2,
+#match_string_2,
+#options_helper_contents_2 span,
+.basic_richtext pre,
+.basic_richtext textarea,
+.debugger_match,
+.match_group_data,
+.match_group_name,
+.match_group_pos,
+.monospace,
+.quickref_label,
+.quickref_regex,
+.richtext pre,
+.slash,
+.treeview_pattern,
+code,
+input,
+select,
+textarea {
+	font-family: Monaco, Consolas, 'Lucida Console', monospace
+}
+#community_form_2,
+#options_2,
+#options_container_2,
+#regex_2,
+.box_overflow_fix,
+.button,
+.debugger_match,
+.label_parent,
+.richtext,
+.richtext pre,
+.richtext textarea,
+.richtext_container,
+.task_item_container,
+.task_item_container * {
+	-webkit-box-sizing: border-box!important;
+	-moz-box-sizing: border-box!important;
+	-ms-box-sizing: border-box!important;
+	box-sizing: border-box!important
+}
+
+#richtext_regex_container_2,
+#test_result_container_2 .overflow_handler {
+	font-size: 0
+}
+
+#regex_colors_2.nowrap,
+#richtext_regex_2.nowrap,
+#richtext_test_2.nowrap,
+#richtext_test_colors_2.nowrap,
+#subst_result_2.nowrap {
+	display: inline-block!important;
+	width: auto!important;
+	min-width: 100%
+}
+
+#regex_colors_2 .caret {
+	border-left: 1px solid transparent;
+	overflow: hidden;
+	display: inline;
+	position: absolute;
+	z-index: 999999
+}
+
+#regex_colors_2.nowrap,
+#richtext_regex_2.nowrap,
+#richtext_test_2.nowrap,
+#richtext_test_colors_2.nowrap,
+#subst_result_2.nowrap {
+	display: inline-block!important;
+	width: auto!important;
+	min-width: 100%
+}
+
+.richtext #regex_colors_2,
+.richtext #richtext_test_colors_2 {
+	position: absolute;
+	top: 0;
+	min-height: 50px
+}
+
