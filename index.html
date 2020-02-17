@@ -307,6 +307,7 @@
 						<pre id="richtext_test_colors_2"><span id="test_color_element_2"></span><br></pre>
 						<textarea wrap="off" data-focus="#test_result_container_2 .overflow_handler" spellcheck="false" id="regex_string_2" class="box_overflow_fix" name="test" rows="10" tabindex="3" placeholder="insert your test string here"></textarea>
 					</div> -->
+					<input type="button" value="Select Files" onclick="get_file_list()">
 				</div>
 			</div>
 		</div>
@@ -553,6 +554,11 @@
 			$("#header_nav li").removeClass("active");
 			$(this).parent().addClass("active")
 		});
+	
+	function get_file_list() {
+  		//alert('click event occured')
+		console.log("test");
+	}
 </script>
 </body>
 </html>
