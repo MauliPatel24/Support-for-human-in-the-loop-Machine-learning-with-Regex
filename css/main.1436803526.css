@@ -5982,3 +5982,52 @@ textarea {
 	min-height: 50px
 }
 
+#test_result_container_2 .overflow_handler.nowrap {
+	overflow-y: auto
+}
+
+#regex_2,
+#richtext_test_colors_2,
+#richtext_test_size_2,
+.colorizer_height {
+	color: transparent
+}
+
+#richtext_test_colors_2,
+#richtext_test_size_2,
+.regex_colorizer,
+.richtext_container {
+	letter-spacing: 1px
+}
+
+#richtext_test_colors_2 s,
+#subst_result_2 s {
+	background: inherit
+}
+
+.richtext #regex_colors_2,
+.richtext #richtext_test_colors_2 {
+	position: absolute;
+	top: 0;
+	min-height: 50px
+}
+
+.richtext #richtext_test_colors_2 span {
+	padding: 0!important;
+	color: transparent
+}
+
+#richtext_test_colors_2 s,
+#subst_result_2 s {
+	background: inherit
+}
+
+.richtext #richtext_test_colors_2 span {
+	padding: 0!important;
+	color: transparent
+}
+
+#test_color_element_2 span {
+	white-space: pre-wrap
+}
+
