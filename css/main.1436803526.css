@@ -5762,6 +5762,75 @@ body.dark #treeview_resizer_2:hover div {
 body.dark #treeview_resizer_2:active div {
 	background: #344152
 }
+
+body.light #scroll_match_2 .overflow_handler,
+body.light #scroll_treeview_2 .overflow_handler {
+	border: 1px solid #ddd;
+	background: #eee
+}
+
+body.dark #scroll_match_2 .overflow_handler,
+body.dark #scroll_treeview_2 .overflow_handler {
+	border: 1px solid #2D2F32;
+	background: #222326
+}
+
+body.light #code_samples_2 a,
+body.light #match_info_2 a {
+	color: #457abb
+}
+
+body.light #code_samples a:hover,
+body.light #match_info a:hover {
+	color: #2d97e6
+}
+
+body.light #match_info_2 .export_matches {
+	color: #000
+}
+
+body.light #match_info_2 .export_matches:hover {
+	color: #57a655
+}
+
+body.dark #code_samples_2 a,
+body.dark #match_info_2 a {
+	color: #1E76E1
+}
+
+body.dark #match_info_2 .export_matches {
+	color: #eee
+}
+
+body.dark #match_info_2 .export_matches:hover {
+	color: #57a655
+}
+
+#match_info_2 table {
+	width: 100%
+}
+
+#match_info_2 table tr:first-child {
+	margin-top: 0!important
+}
+
+#match_info_2 .export_matches {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	opacity: .3;
+	cursor: pointer;
+	font-size: 16px
+}
+
+#match_info_2 .export_matches:hover {
+	opacity: 1
+}
+
 /* run on file*/
 #run_on_file {
 	height: 100%;
@@ -6107,5 +6176,29 @@ textarea {
 #treeview_content_2 {
 	width: auto;
 	padding: 10px 10px 10px 0
+}
+
+#scroll_match_2 .overflow_handler,
+#scroll_treeview_2 .overflow_handler {
+	padding: 5px
+}
+
+#scroll_match_2,
+#scroll_treeview_2 {
+	position: relative
+}
+
+#scroll_match_2 {
+	margin: 10px 0
+}
+
+#scroll_match_2.info_hidden .overflow_handler,
+#scroll_treeview_2.info_hidden .overflow_handler {
+	display: none
+}
+
+#scroll_match_2.info_hidden,
+#scroll_treeview_2.info_hidden {
+	height: 30px
 }
 
