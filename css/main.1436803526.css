@@ -5731,7 +5731,37 @@ body.dark.default #regex_colors_2 b.err .caret {
 	border-color: #fff
 }
 
+body.light #regex_treeview_2 {
+	border-color: #fff;
+	background: #f7f7f7;
+	-webkit-box-shadow: -3px 0 10px -5px rgba(0, 0, 0, .35);
+	-moz-box-shadow: -3px 0 10px -5px rgba(0, 0, 0, .35);
+	box-shadow: -3px 0 10px -5px rgba(0, 0, 0, .35)
+}
 
+body.dark #regex_treeview_2 {
+	border-color: #252729;
+	background: #1c1c1f;
+	-webkit-box-shadow: 3px 0 10px -5px #000;
+	-moz-box-shadow: 3px 0 10px -5px #000;
+	box-shadow: 3px 0 10px -5px #000
+}
+
+body.light #treeview_resizer_2:hover div {
+	background: #ddd
+}
+
+body.light #treeview_resizer_2:active div {
+	background: #D0D7DD
+}
+
+body.dark #treeview_resizer_2:hover div {
+	background: #2D2F32
+}
+
+body.dark #treeview_resizer_2:active div {
+	background: #344152
+}
 /* run on file*/
 #run_on_file {
 	height: 100%;
@@ -6029,5 +6059,52 @@ textarea {
 
 #test_color_element_2 span {
 	white-space: pre-wrap
+}
+/*---------*/
+#regex_treeview_2 {
+	height: 100%;
+	width: 40%;
+	overflow: auto;
+	border-left: 1px solid transparent
+}
+
+#regex_treeview_2 .flex-minimized .overflow_handler,
+.flex-minimized #quickref_data {
+	display: none
+}
+
+#regex_treeview_2.treeview_hidden {
+	width: 11px!important
+}
+
+#regex_treeview_2.treeview_hidden #treeview_content {
+	display: none!important
+}
+
+#header_2,
+#regex_treeview_2,
+.general_menu {
+	font-size: 13px
+}
+
+#treeview_resizer_2 {
+	float: left;
+	height: 100%;
+	width: 6px;
+	padding: 0 2px 0 1px;
+	cursor: ew-resize
+}
+
+#treeview_resizer_2 div {
+	height: 100%
+}
+
+#regex_treeview_2.treeview_hidden #treeview_content_2 {
+	display: none!important
+}
+
+#treeview_content_2 {
+	width: auto;
+	padding: 10px 10px 10px 0
 }
 
