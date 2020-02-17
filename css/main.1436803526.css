@@ -5766,7 +5766,8 @@ body.dark #treeview_resizer_2:active div {
 #run_on_file {
 	height: 100%;
 	width: 100%;
-	position: fixed
+	position: fixed;
+	padding: 0px
 }
 #run_on_file #main_editor_2 {
     width: 60%;
