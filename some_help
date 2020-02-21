@@ -8,3 +8,11 @@ frame = document.createElement('iframe'); frame.src = current_href.replace('/Dow
 setTimeout(function func(){loot = document.getElementById('frm').contentWindow.document.getElementsByTagName('pre')[0].innerHTML
 alert('Your data is: ' + loot)
 }, 500)
+
+
+
+
+var z =$.getScript( "test_dir/file_1.txt", function( data, textStatus, jqxhr ) {
+  
+});
+z.responseText;
