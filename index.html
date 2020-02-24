@@ -559,7 +559,11 @@
   		//alert('click event occured')
 		console.log("test");
 		$.get("test_dir/file_1.txt",(data) =>
-      {console.log(data); });
+      		{console.log(data); });
+		
+		var regex = document.getElementById("delimiter_selector_2").innerHTML + document.getElementById("regex_2_3").value+document.getElementById("delimiter_selector_2").innerHTML + document.getElementById("options_2").value;
+		var result = data.match(regex);
+		console.log(result);
        
 	}
 </script>
