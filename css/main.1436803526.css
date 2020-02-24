@@ -6204,7 +6204,7 @@ textarea {
 
 #match_info_2 input[type=checkbox],
 #match_info_2 input[type=radio] {
-	position: absolute;
+	/*position: absolute;*/
 	clip: rect(1px, 1px, 1px, 1px);
-	visibility: hidden
+	/*visibility: hidden */
 }
