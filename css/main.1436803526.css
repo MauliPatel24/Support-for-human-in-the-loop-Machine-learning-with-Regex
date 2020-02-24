@@ -5428,9 +5428,9 @@ textarea {
 
 input[type=checkbox],
 input[type=radio] {
-	position: absolute;
+	/*position: absolute;*/
 	clip: rect(1px, 1px, 1px, 1px);
-	visibility: hidden
+	/*visibility: hidden*/
 }
 
 input[type=checkbox]+.design_label span,
