@@ -6204,7 +6204,17 @@ textarea {
 
 #match_info_2 input[type=checkbox],
 #match_info_2 input[type=radio] {
-	/*position: absolute;*/
 	clip: rect(1px, 1px, 1px, 1px);
-	/*visibility: hidden */
+	float: left;
+    	clear: none;
+    	margin: 12px 0 0 2px;
 }
+
+#match_info_2 label {
+	float: left;
+    	clear: none;
+    	display: block;
+    	padding: 0px 1em 0px 8px;
+    	margin-top: 3px;
+}
+
