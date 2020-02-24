@@ -577,7 +577,7 @@
 			 var res = "<table>";
 			 var i = 0;
 			 for(i = 0; i<result.length; i++){
-			 	res = res + "<tr> <td> " + result[i] + "</td> <td> " + "<input type='radio' id='Correct' name='" + result[i] + "' value='Correct'> <label for='Correct'>Correct</label><br> <input type='radio' id='InCorrect' name='" + result[i] + "' value='InCorrect'> <label for='InCorrect'>InCorrect</label><br>  </td> </tr>";
+			 	res = res + "<tr> <td> " + result[i] + "</td> <td> " + "<input type='radio' id='Correct' name='" + result[i] + "' value='Correct'> <label for='Correct'>Correct</label> <input type='radio' id='InCorrect' name='" + result[i] + "' value='InCorrect'> <label for='InCorrect'>InCorrect</label> </td> </tr> <br>";
 			 }
 			 res = res + "</table>";
 			 document.getElementById("match_info_2").innerHTML = res;
