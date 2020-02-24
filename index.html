@@ -568,6 +568,16 @@
 
 		var result = data.match(regex);
 		console.log(result);
+		 if (result.length >0)
+		 {
+			 var res = "<table>";
+			 var i = 0;
+			 for(i = 0; i<result.length; i++){
+			 	res = res + "<tr> <td> " + result[i] + "</td> <td> " + "yes/no" + "</td> </tr>";
+			 }
+			 res = res + "</table>";
+			 document.getElementById("match_info_2").appendChild(res);
+		 }
 		});
 		
 		
