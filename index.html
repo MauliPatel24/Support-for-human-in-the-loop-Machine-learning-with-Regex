@@ -564,6 +564,8 @@
 		 debugger;
 		//var regex = document.getElementById("delimiter_selector_2").innerHTML + document.getElementById("regex_2_3").value+document.getElementById("delimiter_selector_2").innerHTML + document.getElementById("options_2").value;
 		var regex = /is/gi;
+		var regex = new RegExp(document.getElementById("regex_2_3").value, document.getElementById("options_2").value);
+
 		var result = data.match(regex);
 		console.log(result);
 		});
