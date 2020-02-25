@@ -16,3 +16,35 @@ var z =$.getScript( "test_dir/file_1.txt", function( data, textStatus, jqxhr ) {
   
 });
 z.responseText;
+-----------------------------------
+https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file
+-----------------------------------------------------------------------------
+
+var input = document.getElementById("myFile");
+var output = document.getElementById("output");
+
+
+input.addEventListener("change", function () {
+  if (this.files && this.files[0]) {
+    var myFile = this.files[0];
+    var reader = new FileReader();
+    
+    reader.addEventListener('load', function (e) {
+      output.textContent = e.target.result;
+    });
+    
+    reader.readAsBinaryString(myFile);
+  }   
+});
+
+
+<input type="file" id="myFile">
+<hr>
+<textarea style="width:500px;height: 400px" id="output"></textarea>
+
+--------------------------------------------------------------
+https://www.javascripture.com/FileList
+---------------------------------------------------
+https://wicg.github.io/directory-upload/proposal.html
+------------------------------------------------------
+
