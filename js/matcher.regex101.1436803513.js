@@ -27,7 +27,7 @@ function updateRegex(e) {
         if (e) {
             if (!Regex101Colorizer.justParsed()) return;
             treeview_timer && clearTimeout(treeview_timer), treeview_timer = setTimeout(function() {
-                replaceHtml("treeview", Regex101Explainer.explain(t))
+               // replaceHtml("treeview", Regex101Explainer.explain(t))
             }, treeview_match_timeout)
         }
     }
