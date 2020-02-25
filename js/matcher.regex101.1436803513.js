@@ -10,6 +10,7 @@ function updateRegex(e) {
             flavor: r
         };
     if (r === FLAVOR.PYTHON && (t.regex = sanitizePython(t.regex)), 0 === t.regex.length) {
+debugger;
         var o = white_space(escapeHtml(test_area.value));
         test_color_element = replaceHtml(test_color_element, o), replaceHtml("treeview", "An explanation of your regex will be automatically generated as you type."), replaceHtml("match_info", "Detailed match information will be displayed here automatically."), replaceHtml("subst_result", o), display_info("no match", "no_match"), clearTimeout(matchTimer), clearTimeout(treeview_timer), $("#debugger_menu, #sample_menu, #permalink_menu, #community_submit, #format_regex").removeClass("active").addClass("disabled"), $("#permalink_data").hide(), stopUnitTests(), updateTooltipData()
     } else {
