@@ -48,3 +48,25 @@ https://www.javascripture.com/FileList
 https://wicg.github.io/directory-upload/proposal.html
 ------------------------------------------------------
 
+*****
+var files = document.getElementById("client_file").files;
+undefined
+files;
+FileList {0: File, length: 1}
+var file = files[0];
+undefined
+file;
+File {name: "test.txt", lastModified: 1582663909572, lastModifiedDate: Tue Feb 25 2020 15:51:49 GMT-0500 (Eastern Standard Time), webkitRelativePath: "", size: 18, …}name: "test.txt"lastModified: 1582663909572lastModifiedDate: Tue Feb 25 2020 15:51:49 GMT-0500 (Eastern Standard Time) {}webkitRelativePath: ""size: 18type: "text/plain"__proto__: File
+var reader = new FileReader();
+undefined
+reader;
+FileReader {readyState: 0, result: null, error: null, onloadstart: null, onprogress: null, …}readyState: 0result: nullerror: nullonloadstart: nullonprogress: nullonload: nullonabort: nullonerror: nullonloadend: null__proto__: FileReader
+reader.readAsText(file);
+undefined
+reader;
+FileReader {readyState: 2, result: "this is test file ", error: null, onloadstart: null, onprogress: null, …}readyState: 2result: "this is test file "error: nullonloadstart: nullonprogress: nullonload: nullonabort: nullonerror: nullonloadend: null__proto__: FileReader
+var text = reader.result;
+undefined
+text;
+"this is test file "
+--------------------------------------------------------------------------
