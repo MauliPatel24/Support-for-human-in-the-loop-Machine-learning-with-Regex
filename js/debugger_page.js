@@ -6,7 +6,7 @@ function read_client_file() {
 	if(files.length>0){
 		console.log("1 file");
 		var file = files[0];
-		var allowed_types = [ 'text/plain' , 'image/png'];
+		var allowed_types = [ 'text/plain' , 'image/png', 'application/pdf'];
 		if(allowed_types.indexOf(file.type) == -1) {
 			alert('Error : Incorrect file type');
 			return;
