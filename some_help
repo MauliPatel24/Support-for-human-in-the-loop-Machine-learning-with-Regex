@@ -47,7 +47,9 @@ https://www.javascripture.com/FileList
 ---------------------------------------------------
 https://wicg.github.io/directory-upload/proposal.html
 ------------------------------------------------------
-
+***** to load local file and read it
+https://usefulangle.com/post/193/javascript-read-local-file 
+------------------------------------------------------------------------------
 *****
 var files = document.getElementById("client_file").files;
 undefined
