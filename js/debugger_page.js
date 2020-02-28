@@ -13,16 +13,19 @@ function read_client_file() {
 	  }
     
     var reader = new FileReader();
-    reader.addEventListener('loadstart', function() {
+    /*reader.addEventListener('loadstart', function() {
 	    console.log('loadstart');
 	});
     reader.addEventListener('load', function(e) {
 	    var text = e.target.result;
-
+	console.log(text);
 	    
-	});
+	});*/
+	reader.onloadstart =function() {console.log('start')};
+	reader.onload = function() { var text = reader.result; console.log(text);}
+	
     reader.readAsText(file);
     //var text = reader.result;
-    console.log(text);
+    
   }
 }
