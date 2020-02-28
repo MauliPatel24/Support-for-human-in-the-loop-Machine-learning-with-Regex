@@ -12,8 +12,6 @@ function read_client_file() {
 			return;
 		}
 		var reader = new FileReader();
-		reader.onloadstart = function() {console.log('load start')};
-		reader.onload = function() { var text = reader.result; console.log(text);}
 	
     		reader.readAsText(file);
 		console.log('test area');
@@ -25,6 +23,8 @@ function read_client_file() {
 			console.log(text);
 	    	});*/
 		//var text = reader.result;
-    
   }
 }
+
+reader.onloadstart = function() {console.log('load start')};
+reader.onload = function() { var text = reader.result; console.log(text);}
