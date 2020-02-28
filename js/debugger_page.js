@@ -15,6 +15,6 @@ function read_client_file() {
     var reader = new FileReader();
     reader.readAsText(file);
     var text = reader.result;
-    console.log('text');
+    console.log(text);
   }
 }
