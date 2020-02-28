@@ -570,7 +570,8 @@
 		//var regex = /is/gi;
 		var regex = new RegExp(document.getElementById("regex_2_3").value, document.getElementById("options_2").value);
 
-		var result = data.match(regex);
+		//var result = data.match(regex);
+		var result = [...new Set(data.match(regex))];
 		console.log(result);
 		 if (result.length >0)
 		 {
