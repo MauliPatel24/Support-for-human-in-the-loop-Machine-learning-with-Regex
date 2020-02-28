@@ -14,7 +14,12 @@ function read_client_file() {
 		var reader = new FileReader();
 		
 		reader.onloadstart = function() {console.log('load start')};
-		reader.onload = function() { var text = reader.result; console.log(text); test_area.value = text;}
+		reader.onload = function() {
+			var text = reader.result;
+			console.log(text);
+			test_area.value = text;
+			$("#regex_string").trigger("input");
+		}
 		
 		reader.readAsText(file);
 		console.log('test area');
