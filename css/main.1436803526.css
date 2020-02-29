@@ -5835,7 +5835,7 @@ body.dark #match_info_2 .export_matches:hover {
 #run_on_file {
 	height: 100%;
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	padding: 0px
 }
 #run_on_file #main_editor_2 {
