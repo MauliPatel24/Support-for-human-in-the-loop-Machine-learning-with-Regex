@@ -6218,3 +6218,77 @@ textarea {
     	margin-top: 3px;
 }
 
+/*----------*/
+
+#clear_all {
+	background: #47a577;
+    	color: #fff;
+    	float: right;
+    	padding: 0 10px;
+    	font-weight: 400;
+    	text-transform: none;
+    	font-size: 12px;
+    	/* font-variant: small-caps; */
+    	height: 24px;
+    	line-height: 24px;
+    	margin: 3px 1px 0 0;
+}
+
+#server_file_list {
+	margin-bottom: 5px;
+    	border-bottom: 1px solid #88222200;
+    	font-size: 16px;
+    	font-weight: 100;
+    	height: 30px;
+    	line-height: 30px;
+}
+
+#get_all_files {
+	background: #47a577;
+    	color: #fff;
+    	float: LEFT;
+    	padding: 0 10px;
+    	font-weight: 400;
+    	text-transform: none;
+    	font-size: 12px;
+    	/* font-variant: small-caps; */
+    	height: 24px;
+    	line-height: 24px;
+    	margin: 3px 1px 0 0;	
+}
+
+#available_files {
+	float: right;	
+}
+
+#files_selection_area {
+	margin-bottom: 5px;
+    	border-bottom: 1px solid #88222200;
+    	font-size: 16px;
+    	font-weight: 100;
+    	height: 30px;
+    	line-height: 30px;
+    	border-color: #ccc!important;
+}
+
+#lable_select_files {
+	margin-right: 10px;	
+}
+
+#Select_files {
+	position: absolute;
+}
+
+#process_selected_files {
+	background: #47a577;
+	color: #fff;
+	float: right;
+	padding: 0 10px;
+	font-weight: 400;
+    	text-transform: none;
+    	font-size: 12px;
+    	/* font-variant: small-caps; */
+    	height: 24px;
+    	line-height: 24px;
+    	margin: 3px 1px 0 0;
+}
