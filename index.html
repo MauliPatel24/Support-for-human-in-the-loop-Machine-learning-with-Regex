@@ -306,7 +306,7 @@
     <div id="server_file_list" > <input type="button" id="get_all_files" value="Load All Files"> 
         <lable id="available_files"> # Files are avalable to process </lable>         </div>
     <div id="files_selection_area"> <lable id="lable_select_files"> Select # of Files </lable> 
-            <input type="number" id="Select_files" name="Select_files" min="1">
+            <input type="number" id="Select_files" name="Select_files" min="1" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 &amp;&amp; event.charCode <= 57">
             <input type="button" id="process_selected_files" value="Process Files"> 
     </div>
 				<div class="overflow_handler flex-grow" style="
