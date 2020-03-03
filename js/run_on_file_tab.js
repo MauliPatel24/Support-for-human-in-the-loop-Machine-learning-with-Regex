@@ -10,4 +10,9 @@ var run_on_file = {
     file_selector : function() {return $('#Select_files');},
     btn_process_files : function () { return $('#process_selected_files');}
     
-}
+};
+
+run_on_file.btn_load_all_files().click(function (){
+    run_on_file.list_of_files = ["file_1.txt", "file_2.txt", "file_3.txt",];
+});
+
