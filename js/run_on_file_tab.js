@@ -8,10 +8,11 @@ var run_on_file = {
     btn_load_all_files : function () { return $('#get_all_files');},
     lbl_available_files : function () { return $('#available_files');},
     file_selector : function() {return $('#Select_files');},
-    btn_process_files : function () { return $('#process_selected_files');}
+    btn_process_files : function () { return $('#process_selected_files');},
     
     update_lable_available_files : function () {
-        run_on_file.lbl_available_files().text(`${run_on_file.list_of_files.length - run_on_file.currrent_index }`+ "Files are available to process")  ;
+        run_on_file.lbl_available_files().text(`${run_on_file.list_of_files.length - run_on_file.currrent_index }`+ "Files are available to process");
+    }
 };
 
 run_on_file.btn_load_all_files().click(function (){
