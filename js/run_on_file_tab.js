@@ -43,6 +43,11 @@ var run_on_file = {
         }
 
         return true;
+    },
+    
+    read_file_data : function () {
+        var file = run_on_file.list_of_files[run_on_file.currrent_index];
+        console.log(file);
     }
 };
 
@@ -68,6 +73,19 @@ run_on_file.btn_process_files().click(function (){
     if(isvalid == true ){
         //do stuff when pass validation
         console.log("validation get passed");
+        
+        //[1] create regex
+        var regex = new RegExp(run_on_file.regex_body().val(), run_on_file.regex_option().val());
+        //var data = "this is test";
+        //var result = data.match(regex);
+        
+        //[2] it will run for loop for every file
+        var file_data = ""; 
+        for(var i=0; i<run_on_file.file_selector().val();i++){
+            //[3] in loop read each file
+            file_data = run_on_file.read_file_data(); 
+        }
+        
     }
     console.log(isvalid);
     
