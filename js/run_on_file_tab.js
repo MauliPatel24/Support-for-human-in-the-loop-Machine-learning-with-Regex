@@ -83,7 +83,12 @@ run_on_file.btn_process_files().click(function (){
         var file_data = ""; 
         for(var i=0; i<run_on_file.file_selector().val();i++){
             //[3] in loop read each file
-            file_data = run_on_file.read_file_data(); 
+            file_data = run_on_file.read_file_data();
+            
+            //[4] apply regex and create result list/set
+            
+            //[5] create/append result table
+            run_on_file.currrent_index++ ;
         }
         
     }
