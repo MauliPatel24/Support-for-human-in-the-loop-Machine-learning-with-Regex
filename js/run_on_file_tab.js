@@ -36,6 +36,11 @@ var run_on_file = {
             alert("No Available Files to process");
             return false;
         }
+        
+        if((run_on_file.list_of_files.length - run_on_file.currrent_index) < run_on_file.file_selector().val()){
+            alert(run_on_file.list_of_files.length - run_on_file.currrent_index + " Files are Available to Process");
+            return false;
+        }
 
         return true;
     }
