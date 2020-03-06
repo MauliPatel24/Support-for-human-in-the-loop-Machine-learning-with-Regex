@@ -3,7 +3,7 @@ var run_on_file = {
     list_of_files :[],
     currrent_index : 0,
     //available_files : list_of_files.length - currrent_index,
-    available_files :list_of_files == undefined ? 0 : list_of_files.length - currrent_index,
+    //available_files :list_of_files == undefined ? 0 : list_of_files.length - currrent_index,
     regex_body : function() {return $('#regex_2_3');},
     regex_option : function() { return $('#options_2'); },
     btn_clear_all : function () { return $('#clear_all');},
@@ -32,7 +32,7 @@ var run_on_file = {
             return false;
         }
         
-        if(run_on_file.available_files <= 0){
+        if((run_on_file.list_of_files.length - run_on_file.currrent_index) <= 0){
             alert("No Available Files to process");
             return false;
         }
