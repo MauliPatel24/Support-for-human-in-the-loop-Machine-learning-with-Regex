@@ -27,7 +27,7 @@ var run_on_file = {
             return false;
         }
 
-        if(run_on_file.file_selector().val() == null){
+        if(run_on_file.file_selector().val() == ""){
             alert("Please Select Files to Proceed");
             return false;
         }
