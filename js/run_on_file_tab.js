@@ -48,16 +48,19 @@ var run_on_file = {
     read_file_data : function (regex) {
         var file = run_on_file.list_of_files[run_on_file.currrent_index];
         console.log(file);
-        file = "test_dir/" + file;
-        $.get(file,(data) =>{
+        var file_path = "test_dir/" + file;
+        $.get(file_path,(data) =>{
             console.log(data); 
             var result = data.match(regex);
             console.log(result);
             if (result.length >0){
                 var res = "<table>";
                 var i = 0;
+                var id;
                 for(i = 0; i<result.length && result[i] != ""; i++){
-                    res = res + "<tr> <td> " + result[i] + "</td> <td> " + "<input type='radio' id='Correct' name='" + result[i] + "' value='Correct'> <label for='Correct'>Correct</label> <input type='radio' id='InCorrect' name='" + result[i] + "' value='InCorrect'> <label for='InCorrect'>InCorrect</label> </td> </tr>";
+                    id = file + "_" + i +" _" + result[i]
+                   // res = res + "<tr> <td> " + result[i] + "</td> <td> " + "<input type='radio' id='Correct' name='" + result[i] + "' value='Correct'> <label for='Correct'>Correct</label> <input type='radio' id='InCorrect' name='" + result[i] + "' value='InCorrect'> <label for='InCorrect'>InCorrect</label> </td> </tr>";
+                    res = res + "<tr> <td>" + "<input type='checkbox' id='" + id + "' name='" + id + "' value='" + result[i] +"'>" + "</td> <td>" + "<label for='" + id + "'>" + result[i] + "</label>" + "</td> </tr>";
                 }
                 res = res + "</table>";
                 document.getElementById("match_info_2").innerHTML = document.getElementById("match_info_2").innerHTML + res;
