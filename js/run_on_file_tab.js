@@ -54,16 +54,23 @@ var run_on_file = {
             var result = data.match(regex);
             console.log(result);
             if (result.length >0){
-                var res = "<table>";
+                //var res = "<table>";
                 var i = 0;
                 var id;
+                var table = document.getElementById("myTable");
                 for(i = 0; i<result.length && result[i] != ""; i++){
                     id = file + "_" + i +" _" + result[i]
                    // res = res + "<tr> <td> " + result[i] + "</td> <td> " + "<input type='radio' id='Correct' name='" + result[i] + "' value='Correct'> <label for='Correct'>Correct</label> <input type='radio' id='InCorrect' name='" + result[i] + "' value='InCorrect'> <label for='InCorrect'>InCorrect</label> </td> </tr>";
-                    res = res + "<tr> <td>" + "<input type='checkbox' id='" + id + "' name='" + id + "' value='" + result[i] +"'>" + "</td> <td>" + "<label for='" + id + "'>" + result[i] + "</label>" + "</td> </tr>";
+                    //res = res + "<tr> <td>" + "<input type='checkbox' id='" + id + "' name='" + id + "' value='" + result[i] +"'>" + "</td> <td>" + "<label for='" + id + "'>" + result[i] + "</label>" + "</td> </tr>";
+                    var row = table.insertRow(-1);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    
+                    cell1.innerHTML = "<input type='checkbox' id='" + id + "' name='" + id + "' value='" + result[i] +"'>";
+                    cell2.innerHTML = "<label for='" + id + "'>" + result[i] + "</label>";
                 }
-                res = res + "</table>";
-                document.getElementById("match_info_2").innerHTML = document.getElementById("match_info_2").innerHTML + res;
+                //res = res + "</table>";
+                //document.getElementById("match_info_2").innerHTML = document.getElementById("match_info_2").innerHTML + res;
                 //document.getElementById("match_info_2").append(res);
             }
         });
