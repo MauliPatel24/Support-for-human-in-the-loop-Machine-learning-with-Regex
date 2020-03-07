@@ -61,7 +61,7 @@ var run_on_file = {
                 }
                 res = res + "</table>";
                 //document.getElementById("match_info_2").innerHTML = res;
-                document.getElementById("match_info_2").appendChild(res);
+                document.getElementById("match_info_2").append(res);
             }
         });
     }
