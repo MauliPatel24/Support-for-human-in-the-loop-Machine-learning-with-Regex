@@ -60,8 +60,8 @@ var run_on_file = {
                     res = res + "<tr> <td> " + result[i] + "</td> <td> " + "<input type='radio' id='Correct' name='" + result[i] + "' value='Correct'> <label for='Correct'>Correct</label> <input type='radio' id='InCorrect' name='" + result[i] + "' value='InCorrect'> <label for='InCorrect'>InCorrect</label> </td> </tr>";
                 }
                 res = res + "</table>";
-                //document.getElementById("match_info_2").innerHTML = res;
-                document.getElementById("match_info_2").append(res);
+                document.getElementById("match_info_2").innerHTML = document.getElementById("match_info_2").innerHTML + res;
+                //document.getElementById("match_info_2").append(res);
             }
         });
     }
