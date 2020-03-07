@@ -45,9 +45,23 @@ var run_on_file = {
         return true;
     },
     
-    read_file_data : function () {
+    read_file_data : function (regex) {
         var file = run_on_file.list_of_files[run_on_file.currrent_index];
         console.log(file);
+        $.get("test_dir/file_1.txt",(data) =>{
+            console.log(data); 
+            var result = data.match(regex);
+            console.log(result);
+            if (result.length >0){
+                var res = "<table>";
+                var i = 0;
+                for(i = 0; i<result.length && result[i] != ""; i++){
+                    res = res + "<tr> <td> " + result[i] + "</td> <td> " + "<input type='radio' id='Correct' name='" + result[i] + "' value='Correct'> <label for='Correct'>Correct</label> <input type='radio' id='InCorrect' name='" + result[i] + "' value='InCorrect'> <label for='InCorrect'>InCorrect</label> </td> </tr>";
+                }
+                res = res + "</table>";
+                document.getElementById("match_info_2").innerHTML = res;
+            }
+        });
     }
 };
 
@@ -83,7 +97,7 @@ run_on_file.btn_process_files().click(function (){
         var file_data = ""; 
         for(var i=0; i<run_on_file.file_selector().val();i++){
             //[3] in loop read each file
-            file_data = run_on_file.read_file_data();
+            file_data = run_on_file.read_file_data(regex);
             
             //[4] apply regex and create result list/set
             
