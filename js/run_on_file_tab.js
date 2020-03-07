@@ -57,7 +57,7 @@ var run_on_file = {
                 //var res = "<table>";
                 var i = 0;
                 var id;
-                var table = document.getElementById("myTable");
+                var table = document.getElementById("result_table");
                 for(i = 0; i<result.length && result[i] != ""; i++){
                     id = file + "_" + i +" _" + result[i]
                    // res = res + "<tr> <td> " + result[i] + "</td> <td> " + "<input type='radio' id='Correct' name='" + result[i] + "' value='Correct'> <label for='Correct'>Correct</label> <input type='radio' id='InCorrect' name='" + result[i] + "' value='InCorrect'> <label for='InCorrect'>InCorrect</label> </td> </tr>";
