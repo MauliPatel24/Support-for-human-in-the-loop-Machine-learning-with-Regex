@@ -139,7 +139,7 @@ run_on_file.btn_clear_all().click(function (){
     
     run_on_file.currrent_index = 0; // reset current index
     
-    run_on_file.lbl_available_files().text("# Files are avalable to process"); //call function to update lable for #of files
+    run_on_file.lbl_available_files().text("# Files are available to process"); //call function to update lable for #of files
     $("#match_info_2 span").prop( "hidden", false); //make visible msg for match information
     $("#result_table").find("tr:gt(0)").remove(); //reset result table
 });
