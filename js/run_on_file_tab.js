@@ -83,6 +83,8 @@ run_on_file.btn_load_all_files().click(function (){
     run_on_file.currrent_index = 0; // reset current index
     
     run_on_file.update_lable_available_files(); //call function to update lable for #of files
+    $("#match_info_2 span").prop( "hidden", false); //make visible msg for match information
+    $("#result_table").find("tr:gt(0)").remove(); //reset result table
 });
 
 run_on_file.btn_process_files().click(function (){
@@ -99,6 +101,7 @@ run_on_file.btn_process_files().click(function (){
     if(isvalid == true ){
         //do stuff when pass validation
         console.log("validation get passed");
+        $("#match_info_2 span").prop( "hidden", true);
         
         //[1] create regex
         var regex = new RegExp(run_on_file.regex_body().val(), run_on_file.regex_option().val());
@@ -124,4 +127,5 @@ run_on_file.btn_process_files().click(function (){
     run_on_file.regex_body().prop( "disabled", false );
     run_on_file.btn_load_all_files().prop( "disabled", false );
     run_on_file.file_selector().prop( "disabled", false );
+    run_on_file.update_lable_available_files(); //call function to update lable for #of files
 });
