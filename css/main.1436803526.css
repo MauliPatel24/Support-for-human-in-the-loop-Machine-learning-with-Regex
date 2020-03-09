@@ -6294,3 +6294,17 @@ textarea {
     	line-height: 24px;
     	margin: 3px 1px 0 0;
 }
+
+#status_bar {
+	border: 1px solid #afafaf;
+	margin: 5px 0px;
+	padding: 0px 5px;
+}
+
+#result_area {
+	position: absolute;
+    	top: 37px;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+}
