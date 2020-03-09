@@ -120,9 +120,9 @@ run_on_file.btn_process_files().click(function (){
             
             //[5] create/append result table
             setTimeout(() =>
-            run_on_file.currrent_index++ ;
+            run_on_file.currrent_index++ ; , 2000);
             $("#status_bar span").text("Processed "+ (i+1) +" Files out of " + run_on_file.file_selector().val());
-            , 2000);
+            
         }
         
     }
