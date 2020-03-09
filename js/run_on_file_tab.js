@@ -119,8 +119,10 @@ run_on_file.btn_process_files().click(function (){
             //[4] apply regex and create result list/set
             
             //[5] create/append result table
+            setTimeout(() =>
             run_on_file.currrent_index++ ;
             $("#status_bar span").text("Processed "+ (i+1) +" Files out of " + run_on_file.file_selector().val());
+            , 2000);
         }
         
     }
