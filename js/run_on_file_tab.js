@@ -103,7 +103,7 @@ run_on_file.btn_process_files().click(function (){
         console.log("validation get passed");
         $("#match_info_2 span").prop( "hidden", true);
         $("#status_bar").prop("hidden", false); //statusbar visible
-        $("#result_area").css("top", "35px"); //move result area down to make space for status bar
+        $("#result_area").css("top", "60px"); //move result area down to make space for status bar
         //[1] create regex
         var regex = new RegExp(run_on_file.regex_body().val(), run_on_file.regex_option().val());
         //var data = "this is test";
@@ -126,7 +126,7 @@ run_on_file.btn_process_files().click(function (){
     console.log(isvalid);
     
     $("#status_bar").prop("hidden", true); //satusbar hidden now
-    $("#result_area").css("top", "60px"); //move result area up on original space
+    $("#result_area").css("top", "35px"); //move result area up on original space
     
     //validation pass or fail it will enable all element which was disabled ealier.
     run_on_file.regex_body().prop( "disabled", false );
