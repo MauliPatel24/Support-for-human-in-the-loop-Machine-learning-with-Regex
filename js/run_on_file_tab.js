@@ -74,7 +74,7 @@ var run_on_file = {
                 //document.getElementById("match_info_2").append(res);
             }
         });
-        setTimeout(() => return file, 500);
+        return file;
     }
 };
 
