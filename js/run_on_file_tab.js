@@ -74,6 +74,7 @@ var run_on_file = {
                 //document.getElementById("match_info_2").append(res);
             }
         });
+        return file;
     }
 };
 
@@ -114,8 +115,8 @@ run_on_file.btn_process_files().click(function (){
         var file_data = ""; 
         for(var i=0; i<run_on_file.file_selector().val();i++){
             //[3] in loop read each file
-            run_on_file.read_file_data(regex);
-            
+            file_data = run_on_file.read_file_data(regex);
+            console.log(file_data + " done"); 
             //[4] apply regex and create result list/set
             
             //[5] create/append result table
