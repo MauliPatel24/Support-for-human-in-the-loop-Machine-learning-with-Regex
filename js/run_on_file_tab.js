@@ -103,6 +103,7 @@ run_on_file.btn_process_files().click(function (){
         console.log("validation get passed");
         $("#match_info_2 span").prop( "hidden", true);
         $("#status_bar").prop("hidden", false); //statusbar visible
+        $("#status_bar").text("Files are under process");
         $("#result_area").css("top", "60px"); //move result area down to make space for status bar
         //[1] create regex
         var regex = new RegExp(run_on_file.regex_body().val(), run_on_file.regex_option().val());
@@ -119,7 +120,7 @@ run_on_file.btn_process_files().click(function (){
             
             //[5] create/append result table
             run_on_file.currrent_index++ ;
-            $("#status_bar").text("Processed "+ i+1 +" Files out of " + run_on_file.file_selector().val());
+            $("#status_bar").text("Processed "+ (i+1) +" Files out of " + run_on_file.file_selector().val());
         }
         
     }
