@@ -6308,3 +6308,27 @@ textarea {
     	bottom: 0;
     	right: 0;
 }
+
+#client_file,
+#client_dir {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#file_selection_area label {
+	display: inline;
+	background: #47a577;
+	color: #fff;
+	float: left;
+	padding: 0 10px;
+	font-weight: 400;
+	text-transform: none;
+	font-size: 14px;
+	height: 24px;
+	line-height: 24px;
+	margin: 3px 7px 0 0;
+}
