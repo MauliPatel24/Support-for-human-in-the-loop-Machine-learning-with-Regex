@@ -473,12 +473,19 @@
 			<div id="scroll_treeview" class="box_overflow_fix flex-elem">
 
 				<div id="explainer_label" class="label expander">
-					<span class="fa"></span>Explanation
+					<span class="fa"></span>File Selection
 				</div>
 				<div class="overflow_handler box_overflow_fix flex-grow">
 					<div id="treeview" style="height: 100%">
-						<label for="client_file" style="border: none;">Select files:</label>
-  						<input type="file" id="client_file" name="client_file">
+						<div id="file_selection_area">
+							<label for="client_file" style="border: none;">Select files</label>
+  							<input type="file" id="client_file" name="client_file">
+							<label for="client_dir" style="border: none;">Select Directory</label>
+							<input name="client_dir" id="client_dir" type="file" webkitdirectory multiple>
+						</div>
+						<div id="display_selected_file_list">
+							
+						</div>
 						
 					</div>
 				</div>
