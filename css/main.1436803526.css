@@ -6319,6 +6319,10 @@ textarea {
 	z-index: -1;
 }
 
+#file_selection_area {
+	height: 24px;
+}
+
 #file_selection_area label {
 	display: inline;
 	background: #47a577;
