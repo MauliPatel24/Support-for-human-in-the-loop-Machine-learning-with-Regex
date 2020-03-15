@@ -6,10 +6,10 @@ var debugger_page = {
 };
 
 
-debugger_page.dir_selector.change(function (){
+debugger_page.dir_selector.onchange = function (){
 	console.log("hello");	
 
-});
+};
 
 
 
