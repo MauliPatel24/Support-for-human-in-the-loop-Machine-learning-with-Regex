@@ -10,7 +10,7 @@ debugger_page.dir_selector().on("change", function(){
 	var files = document.getElementById("client_dir").files;
 	document.getElementById("client_dir").files;
 	for (let i=0; i<files.length; i++) {
-		debugger_page.display_area().text()= debugger_page.display_area().text() + files[i].webkitRelativePath;
+		debugger_page.display_area().text(debugger_page.display_area().text() +"\n"+ files[i].webkitRelativePath);
 	};
 
 
