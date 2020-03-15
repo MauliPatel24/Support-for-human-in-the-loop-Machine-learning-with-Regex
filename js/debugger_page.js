@@ -1,3 +1,22 @@
+var debugger_page = {
+	file_selector :function() { return $('#client_file'); },
+	dir_selector :function() { return $('#client_dir'); },
+	display_area : function() { return $('#display_selected_file_list'); },
+	
+};
+
+
+debugger_page.dir_selector.change(function (){
+	console.log("hello");	
+
+});
+
+
+
+
+
+
+//----------------------------------------------------------------------------------------
 document.getElementById("client_file").onchange = function() {read_client_file()};
 
 function read_client_file() {
