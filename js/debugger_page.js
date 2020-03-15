@@ -5,16 +5,16 @@ var debugger_page = {
 	
 };
 
+debugger_page.dir_selector().on("change", function(){ 
+	console.log("dir changed");
+	var files = document.getElementById("client_dir").files;
+	document.getElementById("client_dir").files;
+	for (let i=0; i<files.length; i++) {
+		debugger_page.display_area().text()= debugger_page.display_area().text() + files[i].webkitRelativePath;
+	};
 
-debugger_page.dir_selector.onchange = function (){
-	console.log("hello");	
 
-};
-
-
-
-
-
+});
 
 //----------------------------------------------------------------------------------------
 document.getElementById("client_file").onchange = function() {read_client_file()};
