@@ -8,9 +8,11 @@ var debugger_page = {
 debugger_page.dir_selector().on("change", function(){ 
 	console.log("dir changed");
 	var files = document.getElementById("client_dir").files;
-	document.getElementById("client_dir").files;
+	var ul = document.getElementById("selected_file_list");
 	for (let i=0; i<files.length; i++) {
-		debugger_page.display_area().text(debugger_page.display_area().text() +"\n"+ files[i].webkitRelativePath);
+		//debugger_page.display_area().text(debugger_page.display_area().text() +"\n"+ files[i].webkitRelativePath);
+		var x = files[0].webkitRelativePath.split('/');
+		console.log(x);
 	};
 
 
