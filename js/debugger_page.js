@@ -9,10 +9,23 @@ debugger_page.dir_selector().on("change", function(){
 	console.log("dir changed");
 	var files = document.getElementById("client_dir").files;
 	var ul = document.getElementById("selected_file_list");
+	var li = document.createElement('li');
+	li.innerHTML = files[0].webkitRelativePath.split('/')[0];
+	ul.appendChild(li);
+	
 	for (let i=0; i<files.length; i++) {
 		//debugger_page.display_area().text(debugger_page.display_area().text() +"\n"+ files[i].webkitRelativePath);
 		var x = files[i].webkitRelativePath.split('/');
 		console.log(x);
+		for (let j=1; j<x.length; j++){
+			console.log(x[j]);
+			if(x[j] == files[i].name){
+				console.log(x[j] + "is file");
+			}
+			else{
+				console.log(x[j] + "is dir");
+			}
+		}
 	};
 
 
