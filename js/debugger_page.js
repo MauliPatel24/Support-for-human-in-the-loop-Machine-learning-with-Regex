@@ -11,7 +11,7 @@ debugger_page.dir_selector().on("change", function(){
 	var ul = document.getElementById("selected_file_list");
 	for (let i=0; i<files.length; i++) {
 		//debugger_page.display_area().text(debugger_page.display_area().text() +"\n"+ files[i].webkitRelativePath);
-		var x = files[0].webkitRelativePath.split('/');
+		var x = files[i].webkitRelativePath.split('/');
 		console.log(x);
 	};
 
