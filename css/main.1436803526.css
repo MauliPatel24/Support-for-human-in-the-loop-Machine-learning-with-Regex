@@ -3430,10 +3430,12 @@ body.dark #unit_tests_list .unit_test_player .run_tests.fa-stop {
 	float: right;
 	line-height: 30px;
 	vertical-align: middle;
-	font-size: 16px!important;
+	font-size: 12px!important;
 	margin-right: 5px;
-	font-weight: 700;
-	display: inline-block
+	font-weight: 200;
+	display: inline-block;
+	color: black !important;
+	text-transform: none;
 }
 
 .expander {
@@ -6353,5 +6355,10 @@ textarea {
 .clickable:hover{
 	color:#47a577;
 	font-weight: 800;
-    font-size: 14px;
+	font-size: 14px;
+}
+
+#padding_size {
+	height: 15px;
+	width: 50px;
 }
