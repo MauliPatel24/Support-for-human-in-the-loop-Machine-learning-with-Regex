@@ -79,12 +79,13 @@ debugger_page.dir_selector().on("change", function(){
 
 $('body').on('click', 'li.clickable', function() {
 	console.log(this.textContent + this.id);// do something
+	var files = document.getElementById("client_dir").files;
 	var index = this.id;
 	read_file(files, index);
 });
 
 //----------------------------------------------------------------------------------------
-document.getElementById("client_file").onchange = function() {read_file()};
+//document.getElementById("client_file").onchange = function() {read_file()};
 
 function read_file(files, index) {
 	console.log('client upload local file');
