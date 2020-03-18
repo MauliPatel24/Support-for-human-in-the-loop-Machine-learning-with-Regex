@@ -22,14 +22,14 @@ debugger_page.dir_selector().on("change", function(){
 		for (let j=1; j<x.length; j++){
 			console.log(x[j]);
 			if(x[j] == files[i].name){
-				console.log(x[j] + "is file");
+				console.log(x[j] + " is file");
 				//var parent = $('#'+x[j-1]);
 				var parent = document.getElementById(x[j-1]);
 				if ($('ul','#'+x[j-1]).length == 0 ){
 					var u = document.createElement('ul');
 					parent.appendChild(u);
 					var c = document.createElement('li');
-					c.setAttribute('id', x[j]);
+					c.setAttribute('id', i);
 					c.setAttribute('class', "abc");
 					c.innerHTML = x[j];
 					u.appendChild(c);
@@ -37,7 +37,7 @@ debugger_page.dir_selector().on("change", function(){
 				else{
 					var u = parent.childNodes[1];
 					var c = document.createElement('li');
-					c.setAttribute('id', x[j]);
+					c.setAttribute('id', i);
 					c.setAttribute('class', "abc");
 					c.innerHTML = x[j];
 					u.appendChild(c);
@@ -71,7 +71,8 @@ debugger_page.dir_selector().on("change", function(){
 });
 
 $('body').on('click', 'li.abc', function() {
-    console.log("hhh");// do something
+	console.log(this.textContent + this.id);// do something
+	read_client_file()
 });
 
 //----------------------------------------------------------------------------------------
@@ -79,7 +80,8 @@ document.getElementById("client_file").onchange = function() {read_client_file()
 
 function read_client_file() {
 	console.log('client upload local file');
-	var files = document.getElementById("client_file").files;
+	//var files = document.getElementById("client_file").files;
+	var files = document.getElementById("client_dir").files;
 	if(files.length>0){
 		console.log("1 file");
 		var file = files[0];
