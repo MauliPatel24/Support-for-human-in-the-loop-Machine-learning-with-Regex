@@ -9,7 +9,9 @@ debugger_page.dir_selector().on("change", function(){
 	console.log("dir changed");
 	var files = document.getElementById("client_dir").files;
 	var ul = document.getElementById("selected_file_list");
+	$( "#selected_file_list" ).empty();
 	var li = document.createElement('li');
+	li.setAttribute("id", files[0].webkitRelativePath.split('/')[0]);
 	li.innerHTML = files[0].webkitRelativePath.split('/')[0];
 	ul.appendChild(li);
 	
@@ -21,6 +23,23 @@ debugger_page.dir_selector().on("change", function(){
 			console.log(x[j]);
 			if(x[j] == files[i].name){
 				console.log(x[j] + "is file");
+				//var parent = $('#'+x[j-1]);
+				var parent = document.getElementById(x[j-1]);
+				if ($('ul','#'+x[j-1]).length == 0 ){
+					var u = document.createElement('ul');
+					parent.appendChild(u);
+					var c = document.createElement('li');
+					c.setAttribute('id', x[j]);
+					c.innerHTML = x[j];
+					u.appendChild(c);
+				}
+				else{
+					var u = parent.childNodes[1];
+					var c = document.createElement('li');
+					c.setAttribute('id', x[j]);
+					c.innerHTML = x[j];
+					u.appendChild(c);
+				}
 			}
 			else{
 				console.log(x[j] + "is dir");
