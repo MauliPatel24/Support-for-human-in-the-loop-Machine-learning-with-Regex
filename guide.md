@@ -6,4 +6,4 @@
 |[ String.match() function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match)   | MDN web docs  | useful to understand |   |   |
 | [RegExp Groups and ranges](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)  | MDN web docs  | useful to understand  |   |   |
 |[Methods of RegExp and String](https://javascript.info/regexp-methods)| javscript info | useful to understand |  |  | 
-|[Return positions of a regex match() in Javascript?]([https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript) | stack overflow | useful |  |  |
+|[Return positions of a regex match() in Javascript?](https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript) | stack overflow | useful |  |  |
