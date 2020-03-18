@@ -5,6 +5,13 @@ var debugger_page = {
 	
 };
 
+debugger_page.file_selector().on("change", function(){ 
+	var files = document.getElementById("client_file").files;
+	var index = 0;
+	read_file(files, index);
+	
+});
+
 debugger_page.dir_selector().on("change", function(){ 
 	console.log("dir changed");
 	var files = document.getElementById("client_dir").files;
@@ -30,7 +37,7 @@ debugger_page.dir_selector().on("change", function(){
 					parent.appendChild(u);
 					var c = document.createElement('li');
 					c.setAttribute('id', i);
-					c.setAttribute('class', "abc");
+					c.setAttribute('class', "clickable");
 					c.innerHTML = x[j];
 					u.appendChild(c);
 				}
@@ -38,7 +45,7 @@ debugger_page.dir_selector().on("change", function(){
 					var u = parent.childNodes[1];
 					var c = document.createElement('li');
 					c.setAttribute('id', i);
-					c.setAttribute('class', "abc");
+					c.setAttribute('class', "clickable");
 					c.innerHTML = x[j];
 					u.appendChild(c);
 				}
@@ -70,21 +77,22 @@ debugger_page.dir_selector().on("change", function(){
 
 });
 
-$('body').on('click', 'li.abc', function() {
+$('body').on('click', 'li.clickable', function() {
 	console.log(this.textContent + this.id);// do something
-	read_client_file()
+	var index = this.id;
+	read_file(files, index);
 });
 
 //----------------------------------------------------------------------------------------
-document.getElementById("client_file").onchange = function() {read_client_file()};
+document.getElementById("client_file").onchange = function() {read_file()};
 
-function read_client_file() {
+function read_file(files, index) {
 	console.log('client upload local file');
 	//var files = document.getElementById("client_file").files;
-	var files = document.getElementById("client_dir").files;
+	//var files = document.getElementById("client_dir").files;
 	if(files.length>0){
 		console.log("1 file");
-		var file = files[0];
+		var file = files[index];
 		var allowed_types = [ 'text/plain' , 'image/png', 'application/pdf'];
 		if(allowed_types.indexOf(file.type) == -1) {
 			alert('Error : Incorrect file type');
