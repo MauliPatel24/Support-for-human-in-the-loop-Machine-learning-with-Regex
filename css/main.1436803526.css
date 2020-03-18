@@ -6336,3 +6336,22 @@ textarea {
 	line-height: 24px;
 	margin: 3px 7px 0 0;
 }
+
+.dir_repre{
+	list-style-type: disc;
+	font-weight: 400;
+	font-size: 14px;
+	font-family: 'Open Sans', "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.clickable{
+	list-style-type: circle;
+	font-weight: 400;
+	font-size: 14px;
+	font-family: 'Open Sans', "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.clickable:hover{
+	color:#47a577;
+	font-weight: 800;
+    font-size: 14px;
+}
