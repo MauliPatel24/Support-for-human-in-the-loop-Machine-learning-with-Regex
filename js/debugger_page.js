@@ -30,6 +30,7 @@ debugger_page.dir_selector().on("change", function(){
 					parent.appendChild(u);
 					var c = document.createElement('li');
 					c.setAttribute('id', x[j]);
+					c.setAttribute('class', "abc");
 					c.innerHTML = x[j];
 					u.appendChild(c);
 				}
@@ -37,19 +38,37 @@ debugger_page.dir_selector().on("change", function(){
 					var u = parent.childNodes[1];
 					var c = document.createElement('li');
 					c.setAttribute('id', x[j]);
+					c.setAttribute('class', "abc");
 					c.innerHTML = x[j];
 					u.appendChild(c);
 				}
 			}
 			else{
 				console.log(x[j] + "is dir");
+				if($('#'+x[j]).length == 0){
+					var parent = document.getElementById(x[j-1]);
+				    if ($('ul','#'+x[j-1]).length == 0 ){
+					    var u = document.createElement('ul');
+					    parent.appendChild(u);
+					    var c = document.createElement('li');
+					    c.setAttribute('id', x[j]);
+					    c.innerHTML = x[j];
+					    u.appendChild(c);
+				    }
+				    else{
+					    var u = parent.childNodes[1];
+					    var c = document.createElement('li');
+					    c.setAttribute('id', x[j]);
+					    c.innerHTML = x[j];
+					    u.appendChild(c);
+				    }
+				}
 			}
 		}
-	};
+	}
 
 
 });
-
 //----------------------------------------------------------------------------------------
 document.getElementById("client_file").onchange = function() {read_client_file()};
 
