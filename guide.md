@@ -7,3 +7,30 @@
 | [RegExp Groups and ranges](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)  | MDN web docs  | useful to understand  |   |   |
 |[Methods of RegExp and String](https://javascript.info/regexp-methods)| javscript info | useful to understand |  |  | 
 |[Return positions of a regex match() in Javascript?](https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript) | stack overflow | useful |  |  |
+
+
+----------------------------------------------------------------
+some temp code snippet
+------------------------------------------------------------------
+**** code to get index of maching pattern ****
+
+let personList = `nIs th
+nis it?
+monday morning hello.
+monday night hi.
+More than four dozen journalists at The Wall Street Journal challenged their bosses and criticized the newspaper’s opinion side in a letter that was sent to top executives on Thursday, the day after China announced that it would expel three Journal staff members in retaliation for a headline that offended the country’s leaders.
+In all, 53 reporters and editors signed the letter. They criticized the newspaper’s response to the fallout from the headline, “China Is the Real Sick Man of Asia,” that went with a Feb. 3 opinion essay by Walter Russell Mead, a Journal columnist, on economic repercussions of the coronavirus outbreak.
+The letter, which was reviewed by The New York Times, urged the`;
+
+let regexpNames =  /is/mgi;
+let match// = regexpNames.exec(personList);
+//do {
+ // console.log(match.index );
+ // console.log(`Hello ${match} `);
+  
+//} while((match = regexpNames.exec(personList)) !== null);
+
+while((match = regexpNames.exec(personList)) !== null){
+  console.log(match.index + "--" + regexpNames.lastIndex);
+  console.log(`Hello ${match} `);
+}
