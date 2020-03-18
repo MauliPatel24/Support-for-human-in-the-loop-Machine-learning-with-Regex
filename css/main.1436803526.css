@@ -3430,12 +3430,10 @@ body.dark #unit_tests_list .unit_test_player .run_tests.fa-stop {
 	float: right;
 	line-height: 30px;
 	vertical-align: middle;
-	font-size: 12px!important;
+	font-size: 16px!important;
 	margin-right: 5px;
-	font-weight: 200;
-	display: inline-block;
-	color: black !important;
-	text-transform: none;
+	font-weight: 700;
+	display: inline-block
 }
 
 .expander {
@@ -6361,4 +6359,20 @@ textarea {
 #padding_size {
 	height: 15px;
 	width: 50px;
+}
+
+.expander_2>span {
+	float: right;
+	line-height: 30px;
+	vertical-align: middle;
+	font-size: 12px!important;
+	margin-right: 5px;
+	font-weight: 200;
+	display: inline-block;
+	color: black !important;
+	text-transform: none;
+}
+
+.expander_2 {
+	cursor: pointer
 }
