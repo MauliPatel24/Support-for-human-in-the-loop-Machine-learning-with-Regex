@@ -19,6 +19,7 @@ debugger_page.dir_selector().on("change", function(){
 	$( "#selected_file_list" ).empty();
 	var li = document.createElement('li');
 	li.setAttribute("id", files[0].webkitRelativePath.split('/')[0]);
+	li.setAttribute('class', "dir_repre");
 	li.innerHTML = files[0].webkitRelativePath.split('/')[0];
 	ul.appendChild(li);
 	
@@ -59,6 +60,7 @@ debugger_page.dir_selector().on("change", function(){
 					    parent.appendChild(u);
 					    var c = document.createElement('li');
 					    c.setAttribute('id', x[j]);
+					    c.setAttribute('class', "dir_repre");
 					    c.innerHTML = x[j];
 					    u.appendChild(c);
 				    }
@@ -66,6 +68,7 @@ debugger_page.dir_selector().on("change", function(){
 					    var u = parent.childNodes[1];
 					    var c = document.createElement('li');
 					    c.setAttribute('id', x[j]);
+					    c.setAttribute('class', "dir_repre");
 					    c.innerHTML = x[j];
 					    u.appendChild(c);
 				    }
