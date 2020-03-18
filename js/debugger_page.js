@@ -69,6 +69,11 @@ debugger_page.dir_selector().on("change", function(){
 
 
 });
+
+$('body').on('click', 'li.abc', function() {
+    console.log("hhh");// do something
+});
+
 //----------------------------------------------------------------------------------------
 document.getElementById("client_file").onchange = function() {read_client_file()};
 
