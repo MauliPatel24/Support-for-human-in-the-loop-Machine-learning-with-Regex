@@ -301,17 +301,18 @@
 			</div>
 			<div id="test_result_container_2" class="box_overflow_fix flex-text ">
 				<label for="regex_string_2">Select Files <input type="button" id="clear_all" value="Clear All"> </label>
-				
-    
-    <div id="server_file_list" > <input type="button" id="get_all_files" value="Load All Files"> 
-        <lable id="available_files"> # Files are avalable to process </lable>         </div>
-    <div id="files_selection_area"> <lable id="lable_select_files"> Select # of Files </lable> 
-            <input type="number" id="Select_files" name="Select_files" min="1" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 &amp;&amp; event.charCode <= 57">
-            <input type="button" id="process_selected_files" value="Process Files"> 
-    </div>
-				<div class="overflow_handler flex-grow" style="
-    display: none;
-">
+    			<div id="server_file_list" > 
+					<input type="button" id="get_all_files" value="Load All Files"> 
+        			<lable id="available_files"> # Files are avalable to process </lable>         
+				</div>
+    			<div id="files_selection_area"> 
+					<lable id="lable_select_files"> Select # of Files </lable> 
+            		<input type="number" id="Select_files" name="Select_files" min="1" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 &amp;&amp; event.charCode <= 57">
+            		<lable for="padding_size"> Word Padding Size </lable>
+					<input type="number" id="padding_size" min="0" value="50" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 &amp;&amp; event.charCode <= 57">
+					<input type="button" id="process_selected_files" value="Process Files"> 
+    			</div>
+				<div class="overflow_handler flex-grow" style= "display: none;">
 					<!--<div class="richtext" id="richtext_test_2">
 						<pre><span id="richtext_test_size_2"></span><br>&nbsp;</pre>
 						<pre id="richtext_test_colors_2"><span id="test_color_element_2"></span><br></pre>
@@ -327,9 +328,10 @@
 				<div id="scroll_match_2" class="box_overflow_fix flex-elem">
 
 					<div id="match_label_2" class="label expander_2">
-						<span class="">Word Padding Size
+						<!--<span class="">Word Padding Size
 							<input type="number" id="padding_size" min="0" value="50" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 &amp;&amp; event.charCode <= 57">
-    						</span>Match information
+    						</span>-->
+						Match information
 					</div>
 					<div id="status_bar">
 						<i class="fa fa-spinner fa-spin"></i>
