@@ -59,7 +59,31 @@ var run_on_file = {
         $.get(file_path,(data) =>{
             console.log(data); 
             file_data = data;
-            var result = data.match(regex);
+            //var result = data.match(regex);
+            var result = [];
+            var pre_word = [];
+            var post_word = [];
+            var match ="";
+            var padding= 5;
+            while((match = regex.exec(data)) !== null){
+                result.push(match);
+                if(match.index >= padding){
+                    pre_word.push(data.substr((match.index-padding), match.index));
+                }
+                else{
+                    pre_word.push(data.substr(0, (match.index-1)));
+                }
+                if((regex.lastIndex+padding) > data.length){
+                    post_word.push(data.substr(regex.lastIndex));
+                }
+                else{
+                    post_word.push(data.substr(regex.lastIndex), padding);
+                }
+               // console.log(match.index + "--" + regexpNames.lastIndex);
+               // console.log(Hello ${match} ); 
+                
+            }
+            
             console.log(result);
             if (result.length >0){
                 //var res = "<table>";
@@ -75,7 +99,7 @@ var run_on_file = {
                     var cell2 = row.insertCell(1);
                     
                     cell1.innerHTML = "<input type='checkbox' id='" + id + "' name='" + id + "' value='" + result[i] +"'>";
-                    cell2.innerHTML = "<label for='" + id + "'>" + result[i] + "</label>";
+                    cell2.innerHTML = "<label for='" + id + "'>" + pre_word[i] + " ~ "+ result[i] + " ~ " + post_word[i] + "</label>";
                 }
                 //res = res + "</table>";
                 //document.getElementById("match_info_2").innerHTML = document.getElementById("match_info_2").innerHTML + res;
