@@ -53,10 +53,12 @@ var run_on_file = {
     
     read_file_data : function (regex) {
         var file = run_on_file.list_of_files[run_on_file.currrent_index];
+        var file_data = "";
         console.log(file);
         var file_path = "test_dir/" + file;
         $.get(file_path,(data) =>{
             console.log(data); 
+            file_data = data;
             var result = data.match(regex);
             console.log(result);
             if (result.length >0){
@@ -80,7 +82,7 @@ var run_on_file = {
                 //document.getElementById("match_info_2").append(res);
             }
         });
-        return file;
+        return file_data;
     }
 };
 
