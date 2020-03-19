@@ -11,6 +11,7 @@ var run_on_file = {
     lbl_available_files : function () { return $('#available_files');},
     file_selector : function() {return $('#Select_files');},
     btn_process_files : function () { return $('#process_selected_files');},
+    word_padding : function () { return $('#padding_size');},
     
     update_lable_available_files : function () {
         run_on_file.lbl_available_files().text(`${run_on_file.list_of_files.length - run_on_file.currrent_index }`+ " Files are available to process");
@@ -39,6 +40,11 @@ var run_on_file = {
         
         if((run_on_file.list_of_files.length - run_on_file.currrent_index) < run_on_file.file_selector().val()){
             alert(run_on_file.list_of_files.length - run_on_file.currrent_index + " Files are Available to Process");
+            return false;
+        }
+        
+        if(run_on_file.word_padding().val() == ""){
+            alert("Word Padding Size can not be NULL");
             return false;
         }
 
