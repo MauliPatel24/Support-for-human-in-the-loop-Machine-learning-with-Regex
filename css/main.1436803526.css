@@ -6278,7 +6278,7 @@ textarea {
 }
 
 #Select_files {
-	position: absolute;
+	width: 90px;
 }
 
 #process_selected_files {
