@@ -71,13 +71,13 @@ var run_on_file = {
                     pre_word.push(data.substr((match.index-padding), match.index));
                 }
                 else{
-                    pre_word.push(data.substr(0, (match.index-1)));
+                    pre_word.push(data.substr(0, match.index));
                 }
                 if((regex.lastIndex+padding) > data.length){
                     post_word.push(data.substr(regex.lastIndex));
                 }
                 else{
-                    post_word.push(data.substr(regex.lastIndex), padding);
+                    post_word.push(data.substr(regex.lastIndex , padding));
                 }
                // console.log(match.index + "--" + regexpNames.lastIndex);
                // console.log(Hello ${match} ); 
