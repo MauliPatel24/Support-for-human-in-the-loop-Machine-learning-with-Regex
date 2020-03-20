@@ -68,7 +68,7 @@ var run_on_file = {
             while((match = regex.exec(data)) !== null){
                 result.push(match);
                 if(match.index >= padding){
-                    pre_word.push(data.substr((match.index-padding), match.index));
+                    pre_word.push(data.substr((match.index-padding), padding));
                 }
                 else{
                     pre_word.push(data.substr(0, match.index));
