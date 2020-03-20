@@ -6218,6 +6218,7 @@ textarea {
     	margin-top: 3px;
 	border: none;
     	text-transform: none;
+	width: max-content;
 }
 
 /*----------*/
