@@ -99,7 +99,8 @@ var run_on_file = {
                     var cell2 = row.insertCell(1);
                     
                     cell1.innerHTML = "<input type='checkbox' id='" + id + "' name='" + id + "' value='" + result[i] +"'>";
-                    cell2.innerHTML = "<label for='" + id + "'>" + pre_word[i] + " ~ "+ result[i] + " ~ " + post_word[i] + "</label>";
+                    //cell2.innerHTML = "<label for='" + id + "'>" + pre_word[i] + " ~ "+ result[i] + " ~ " + post_word[i] + "</label>";
+                    cell2.innerHTML = "<label for='" + id + "'>" + "<span class ='pre_post'>" +pre_word[i] + "</span>" + result[i] + "<span class ='pre_post'>"+ post_word[i] + "</span>" +"</label>";
                 }
                 //res = res + "</table>";
                 //document.getElementById("match_info_2").innerHTML = document.getElementById("match_info_2").innerHTML + res;
