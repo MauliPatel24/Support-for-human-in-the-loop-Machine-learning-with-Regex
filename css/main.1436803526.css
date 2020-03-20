@@ -6219,6 +6219,8 @@ textarea {
 	border: none;
     	text-transform: none;
 	width: max-content;
+	color: #49b485;
+	font-weight: 700;
 }
 
 /*----------*/
@@ -6376,4 +6378,9 @@ textarea {
 
 .expander_2 {
 	cursor: pointer
+}
+
+.pre_post{
+	color: black;
+	font-weight: 100;
 }
