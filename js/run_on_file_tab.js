@@ -56,6 +56,7 @@ var run_on_file = {
         var file_data = "";
         console.log(file);
         var file_path = "test_dir/" + file;
+        var padding= parseInt(run_on_file.word_padding().val());
         $.get(file_path,(data) =>{
             console.log(data); 
             file_data = data;
@@ -64,7 +65,6 @@ var run_on_file = {
             var pre_word = [];
             var post_word = [];
             var match ="";
-            var padding= 5;
             while((match = regex.exec(data)) !== null){
                 result.push(match);
                 if(match.index >= padding){
