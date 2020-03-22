@@ -192,6 +192,10 @@ run_on_file.show_word_p().click(function(){
     console.log("show_click");
     run_on_file.show_word_p().hide();
     run_on_file.hide_word_p().show();
+    
+    $('.pre_post').show();
+    $('#match_info_2 label').css('color','#49b485');
+    $('#match_info_2 label').css('font-weight','700');
 });
 
 run_on_file.hide_word_p().click(function(){
@@ -209,8 +213,4 @@ $( document ).ready(function() {
     console.log( "ready!" );
     run_on_file.show_word_p().hide();
     run_on_file.hide_word_p().hide();
-    
-    $('.pre_post').show();
-    $('#match_info_2 label').css('color','#49b485');
-    $('#match_info_2 label').css('font-weight','700');
 });
