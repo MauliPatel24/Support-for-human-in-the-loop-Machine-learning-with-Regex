@@ -66,17 +66,25 @@ var run_on_file = {
             console.log(data); 
             file_data = data;
             //var result = data.match(regex);
+            var file_name = [];
+            var pre_word_index =[];
+            var post_word_index =[];
+            var match_index =[];
             var result = [];
             var pre_word = [];
             var post_word = [];
             var match ="";
             while((match = regex.exec(data)) !== null){
+                file_name.push(file);
+                
                 result.push(match);
                 if(match.index >= padding){
                     pre_word.push(data.substr((match.index-padding), padding));
+                    pre_word_index.push((match.index-padding) +'-' + padding);
                 }
                 else{
                     pre_word.push(data.substr(0, match.index));
+                    pre_word_index.push(0+'-'+ match.index);
                 }
                 if((regex.lastIndex+padding) > data.length){
                     post_word.push(data.substr(regex.lastIndex));
