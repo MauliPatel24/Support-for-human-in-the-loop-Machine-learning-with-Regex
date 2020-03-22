@@ -76,7 +76,7 @@ var run_on_file = {
             var match ="";
             while((match = regex.exec(data)) !== null){
                 file_name.push(file);
-                
+                match_index.push(match.index+'-'+match.length);
                 result.push(match);
                 if(match.index >= padding){
                     pre_word.push(data.substr((match.index-padding), padding));
@@ -88,9 +88,11 @@ var run_on_file = {
                 }
                 if((regex.lastIndex+padding) > data.length){
                     post_word.push(data.substr(regex.lastIndex));
+                    post_word_index.push(regex.lastIndex);
                 }
                 else{
                     post_word.push(data.substr(regex.lastIndex , padding));
+                    post_word_index.push(regex.lastIndex + '-' +padding);
                 }
                // console.log(match.index + "--" + regexpNames.lastIndex);
                // console.log(Hello ${match} ); 
@@ -108,12 +110,24 @@ var run_on_file = {
                    // res = res + "<tr> <td> " + result[i] + "</td> <td> " + "<input type='radio' id='Correct' name='" + result[i] + "' value='Correct'> <label for='Correct'>Correct</label> <input type='radio' id='InCorrect' name='" + result[i] + "' value='InCorrect'> <label for='InCorrect'>InCorrect</label> </td> </tr>";
                     //res = res + "<tr> <td>" + "<input type='checkbox' id='" + id + "' name='" + id + "' value='" + result[i] +"'>" + "</td> <td>" + "<label for='" + id + "'>" + result[i] + "</label>" + "</td> </tr>";
                     var row = table.insertRow(-1);
-                    var cell1 = row.insertCell(0);
-                    var cell2 = row.insertCell(1);
+                    var cell0 = row.insertCell(0);
+                    var cell1 = row.insertCell(1);
+                    var cell2 = row.insertCell(2);
+                    var cell3 = row.insertCell(3);
+                    var cell4 = row.insertCell(4);
+                    var cell5 = row.insertCell(5);
+                    var cell6 = row.insertCell(6);
+                    var cell7 = row.insertCell(7);
                     
-                    cell1.innerHTML = "<input type='checkbox' id='" + id + "' name='" + id + "' value='" + result[i] +"'>";
-                    //cell2.innerHTML = "<label for='" + id + "'>" + pre_word[i] + " ~ "+ result[i] + " ~ " + post_word[i] + "</label>";
-                    cell2.innerHTML = "<label for='" + id + "'>" + "<span class ='pre_post'>" +pre_word[i] + "</span>" + result[i] + "<span class ='pre_post'>"+ post_word[i] + "</span>" +"</label>";
+                    cell0.innerHTML = "<input type='checkbox' id='" + id + "' name='" + id + "' value='" + result[i] +"'>";
+                    cell1.innerHTML = file_name[i];
+                    cell2.innerHTML = pre_word_index[i];
+                    cell3.innerHTML = pre_word[i];
+                    cell4.innerHTML = post_word_index[i];
+                    cell5.innerHTML = post_word[i];
+                    cell6.innerHTML = match_index[i];
+                    //cll2.innerHTML = "<label for='" + id + "'>" + pre_word[i] + " ~ "+ result[i] + " ~ " + post_word[i] + "</label>";
+                    cell7.innerHTML = "<label for='" + id + "'>" + "<span class ='pre_post'>" +pre_word[i] + "</span>" + result[i] + "<span class ='pre_post'>"+ post_word[i] + "</span>" +"</label>";
                 }
                 //res = res + "</table>";
                 //document.getElementById("match_info_2").innerHTML = document.getElementById("match_info_2").innerHTML + res;
