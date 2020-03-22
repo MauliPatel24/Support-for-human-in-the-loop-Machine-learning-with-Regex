@@ -14,6 +14,9 @@ var run_on_file = {
     word_padding : function () { return $('#padding_size');},
     show_word_p : function () { return $('#show_p_w');},
     hide_word_p : function () { return $('#hide_p_w');},
+    regex_val : function () { return $('#regex_val');},
+    padding_val : function () { return $('#padding_val');},
+    //<input type="text" id="regex_val"> <input type="number" id="padding_val">
     
     update_lable_available_files : function () {
         run_on_file.lbl_available_files().text(`${run_on_file.list_of_files.length - run_on_file.currrent_index }`+ " Files are available to process");
@@ -160,7 +163,10 @@ run_on_file.btn_process_files().click(function (){
             $("#status_bar span").text("Processed "+ (i+1) +" Files out of " + run_on_file.file_selector().val());
             
         }
-     run_on_file.hide_word_p().show();    
+        run_on_file.hide_word_p().show();
+        run_onfile.regex_val().val(regex);
+        run_onfile.padding_val().val(run_on_file.word_padding().val());
+        
     }
     console.log(isvalid);
     
