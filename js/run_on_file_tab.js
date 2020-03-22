@@ -12,7 +12,7 @@ var run_on_file = {
     file_selector : function() {return $('#Select_files');},
     btn_process_files : function () { return $('#process_selected_files');},
     word_padding : function () { return $('#padding_size');},
-        show_word_p : function () { return $('#show_p_w');},
+    show_word_p : function () { return $('#show_p_w');},
     hide_word_p : function () { return $('#hide_p_w');},
     
     update_lable_available_files : function () {
@@ -160,7 +160,7 @@ run_on_file.btn_process_files().click(function (){
             $("#status_bar span").text("Processed "+ (i+1) +" Files out of " + run_on_file.file_selector().val());
             
         }
-        
+     run_on_file.hide_word_p().show();    
     }
     console.log(isvalid);
     
@@ -190,8 +190,18 @@ run_on_file.btn_clear_all().click(function (){
 
 run_on_file.show_word_p().click(function(){
     console.log("show_click");
+    run_on_file.show_word_p().hide();
+    run_on_file.hide_word_p().show();
 });
 
 run_on_file.hide_word_p().click(function(){
     console.log("hide_click");
+    run_on_file.show_word_p().show();
+    run_on_file.hide_word_p().hide();
+});
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+    run_on_file.show_word_p().hide();
+    run_on_file.hide_word_p().hide();
 });
