@@ -6384,3 +6384,18 @@ textarea {
 	color: black;
 	font-weight: 100;
 }
+
+.hide_show_class {
+	display: inline;
+	background: #47a577;
+	color: #fff;
+	float: right;
+	padding: 0 10px;
+	font-weight: 400;
+	text-transform: none;
+	font-size: 14px;
+	height: 24px;
+	line-height: 24px;
+	margin: 3px 7px 0 0;
+	border: none;
+}
