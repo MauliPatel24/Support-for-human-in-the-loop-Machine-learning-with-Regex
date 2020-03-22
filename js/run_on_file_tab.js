@@ -198,10 +198,19 @@ run_on_file.hide_word_p().click(function(){
     console.log("hide_click");
     run_on_file.show_word_p().show();
     run_on_file.hide_word_p().hide();
+    
+    $('.pre_post').hide();
+    $('#match_info_2 label').css('color','black');
+    $('#match_info_2 label').css('font-weight','100');
+    
 });
 
 $( document ).ready(function() {
     console.log( "ready!" );
     run_on_file.show_word_p().hide();
     run_on_file.hide_word_p().hide();
+    
+    $('.pre_post').show();
+    $('#match_info_2 label').css('color','#49b485');
+    $('#match_info_2 label').css('font-weight','700');
 });
