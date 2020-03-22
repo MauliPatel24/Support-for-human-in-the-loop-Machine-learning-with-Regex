@@ -164,8 +164,8 @@ run_on_file.btn_process_files().click(function (){
             
         }
         run_on_file.hide_word_p().show();
-        run_onfile.regex_val().val(regex);
-        run_onfile.padding_val().val(run_on_file.word_padding().val());
+        run_on_file.regex_val().val(regex);
+        run_on_file.padding_val().val(run_on_file.word_padding().val());
         
     }
     console.log(isvalid);
