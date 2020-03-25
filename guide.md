@@ -7,6 +7,11 @@
 | [RegExp Groups and ranges](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)  | MDN web docs  | useful to understand  |   |   |
 |[Methods of RegExp and String](https://javascript.info/regexp-methods)| javscript info | useful to understand |  |  | 
 |[Return positions of a regex match() in Javascript?](https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript) | stack overflow | useful |  |  |
+|[Ajax Call](https://mkyong.com/spring-mvc/spring-4-mvc-ajax-hello-world-example/) | mkyong | useful |  |  |
+|[Ajax call](https://howtodoinjava.com/ajax/complete-ajax-tutorial/)|  | tried(works) | | |
+|[Ajax call Explanation](https://stackoverflow.com/questions/4112686/how-to-use-servlets-and-ajax) | stackoverflow | working |  |  |
+|[Ajax call](https://beginnersbook.com/2017/07/how-to-create-and-run-servlet-in-eclipse-ide/) |  | useful |  |  |
+|[exp about location of external jar file](https://stackoverflow.com/questions/4961336/i-am-getting-java-lang-classnotfoundexception-com-google-gson-gson-error-even)| stak overflow | worked |  |  |
 
 
 ----------------------------------------------------------------
