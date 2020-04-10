@@ -243,4 +243,6 @@ $( document ).ready(function() {
     console.log( "ready!" );
     run_on_file.show_word_p().hide();
     run_on_file.hide_word_p().hide();
+    
+    $('button.modify').off('click').on('click', function(e) { debugger; console.log(e.toElement.parentNode.parentNode);})
 });
