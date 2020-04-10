@@ -239,10 +239,39 @@ run_on_file.hide_word_p().click(function(){
     
 });
 
+odify_match = function(e) {
+    console.log(e.toElement.parentNode.parentNode);
+
+    var highlighted_text = '';
+    if (window.getSelection) {
+       
+
+        if(window.getSelection().anchorNode.parentNode.parentNode.parentNode.parentNode == e.toElement.parentNode.parentNode){ 
+            console.log('ok');
+            highlighted_text = window.getSelection().toString();
+        }else if(window.getSelection().anchorNode.parentNode.parentNode.parentNode == e.toElement.parentNode.parentNode){
+            console.log('ok');
+            highlighted_text = window.getSelection().toString();
+        }
+        else{
+            alert("invalid text selected or invalid button pressed...!!!")
+        }
+
+    } else if (document.selection && document.selection.type != "Control") {
+        highlighted_text = document.selection.createRange().text;
+    }
+    console.log(highlighted_text);
+
+};
+
 $( document ).ready(function() {
     console.log( "ready!" );
     run_on_file.show_word_p().hide();
     run_on_file.hide_word_p().hide();
     
-    $('button.modify').off('click').on('click', function(e) { debugger; console.log(e.toElement.parentNode.parentNode);})
+    $('button.modify').off('click').on('click', function(e) { 
+        debugger;
+        
+        modify_match(e);
+    });
 });
