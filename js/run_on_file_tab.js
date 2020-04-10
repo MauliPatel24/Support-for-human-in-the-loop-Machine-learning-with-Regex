@@ -118,6 +118,7 @@ var run_on_file = {
                     var cell5 = row.insertCell(5);
                     var cell6 = row.insertCell(6);
                     var cell7 = row.insertCell(7);
+                    var cell8 = row.insertCell(8);
                     
                     cell0.innerHTML = "<input type='checkbox' id='" + id + "' name='" + id + "' value='" + result[i] +"'>";
                     cell1.innerHTML = file_name[i];
@@ -128,6 +129,7 @@ var run_on_file = {
                     cell6.innerHTML = match_index[i];
                     //cll2.innerHTML = "<label for='" + id + "'>" + pre_word[i] + " ~ "+ result[i] + " ~ " + post_word[i] + "</label>";
                     cell7.innerHTML = "<label for='" + id + "'>" + "<span class ='pre_post'>" +pre_word[i] + "</span>" + result[i] + "<span class ='pre_post'>"+ post_word[i] + "</span>" +"</label>";
+                    cell8.innerHTML = "<button  class='modify'>Modify</button>"
                 }
                 //res = res + "</table>";
                 //document.getElementById("match_info_2").innerHTML = document.getElementById("match_info_2").innerHTML + res;
