@@ -6399,3 +6399,11 @@ textarea {
 	margin: 3px 7px 0 0;
 	border: none;
 }
+
+.modify {
+	background: #47a577;
+	color: #fff;
+	border: none;
+	padding: 3px 10px;
+	margin-right : 5px;
+}
